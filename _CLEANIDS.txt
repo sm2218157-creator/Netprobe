@@ -1,0 +1,149 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — clean ids.xml
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: جمع IDs من موارد التطبيق فقط ═══
+  IDs خام: 337
+  بعد الفلترة: 185
+  محجوزة محذوفة: 5
+  مكتبية محذوفة: 147
+  ✅ ids.xml (185 id)
+
+  عيّنة:
+    actions
+    activity_chooser_view_content
+    alertTitle
+    background
+    btnAbout
+    btnCheckAdapter
+    btnClear
+    btnDiscoveryScan
+    btnFilterAll
+    btnFilterToday
+    btnFilterWeek
+    btnInstallAdvanced
+    btnInstallBasic
+    btnInstallWireless
+    btnMenu
+    btnRecheck
+    btnReset
+    btnSave
+    btnScanWifi
+    btnSectionInstall
+
+═══ PHASE 2: ids.xml النهائي ═══
+185
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="actions"/>
+    <item type="id" name="activity_chooser_view_content"/>
+    <item type="id" name="alertTitle"/>
+    <item type="id" name="background"/>
+    <item type="id" name="btnAbout"/>
+    <item type="id" name="btnCheckAdapter"/>
+    <item type="id" name="btnClear"/>
+    <item type="id" name="btnDiscoveryScan"/>
+    <item type="id" name="btnFilterAll"/>
+    <item type="id" name="btnFilterToday"/>
+    <item type="id" name="btnFilterWeek"/>
+    <item type="id" name="btnInstallAdvanced"/>
+    <item type="id" name="btnInstallBasic"/>
+
+═══ PHASE 3: البناء ═══
+> Task :app:mergeDebugResources
+> Task :app:mergeDebugJavaResource
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeExtDexDebug FROM-CACHE
+> Task :app:mergeLibDexDebug FROM-CACHE
+> Task :app:mergeDebugJniLibFolders FROM-CACHE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:4: AAPT: error: resource string/menu_section_main (aka com.xk.netprobe:string/menu_section_main) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:7: AAPT: error: resource string/menu_home (aka com.xk.netprobe:string/menu_home) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:8: AAPT: error: resource string/menu_fast_scan (aka com.xk.netprobe:string/menu_fast_scan) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:9: AAPT: error: resource string/menu_discovery (aka com.xk.netprobe:string/menu_discovery) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:10: AAPT: error: resource string/menu_nmap (aka com.xk.netprobe:string/menu_nmap) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:14: AAPT: error: resource string/menu_section_tools (aka com.xk.netprobe:string/menu_section_tools) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:17: AAPT: error: resource string/menu_tools (aka com.xk.netprobe:string/menu_tools) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:18: AAPT: error: resource string/menu_wireless (aka com.xk.netprobe:string/menu_wireless) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:22: AAPT: error: resource string/menu_section_system (aka com.xk.netprobe:string/menu_section_system) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:25: AAPT: error: resource string/menu_status (aka com.xk.netprobe:string/menu_status) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:26: AAPT: error: resource string/menu_history (aka com.xk.netprobe:string/menu_history) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:27: AAPT: error: resource string/menu_settings (aka com.xk.netprobe:string/menu_settings) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:28: AAPT: error: resource string/menu_about (aka com.xk.netprobe:string/menu_about) not found.
+         
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 6s
+27 actionable tasks: 13 executed, 14 from cache
+
+═══ PHASE 4: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد (أول 25) ---
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:4: AAPT: error: resource string/menu_section_main (aka com.xk.netprobe:string/menu_section_main) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:7: AAPT: error: resource string/menu_home (aka com.xk.netprobe:string/menu_home) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:8: AAPT: error: resource string/menu_fast_scan (aka com.xk.netprobe:string/menu_fast_scan) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:9: AAPT: error: resource string/menu_discovery (aka com.xk.netprobe:string/menu_discovery) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:10: AAPT: error: resource string/menu_nmap (aka com.xk.netprobe:string/menu_nmap) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:14: AAPT: error: resource string/menu_section_tools (aka com.xk.netprobe:string/menu_section_tools) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:17: AAPT: error: resource string/menu_tools (aka com.xk.netprobe:string/menu_tools) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:18: AAPT: error: resource string/menu_wireless (aka com.xk.netprobe:string/menu_wireless) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:22: AAPT: error: resource string/menu_section_system (aka com.xk.netprobe:string/menu_section_system) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:25: AAPT: error: resource string/menu_status (aka com.xk.netprobe:string/menu_status) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:26: AAPT: error: resource string/menu_history (aka com.xk.netprobe:string/menu_history) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:27: AAPT: error: resource string/menu_settings (aka com.xk.netprobe:string/menu_settings) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:28: AAPT: error: resource string/menu_about (aka com.xk.netprobe:string/menu_about) not found.
+
+--- أخطاء Java (أول 25) ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:4: AAPT: error: resource string/menu_section_main (aka com.xk.netprobe:string/menu_section_main) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:7: AAPT: error: resource string/menu_home (aka com.xk.netprobe:string/menu_home) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/menu/menu_drawer.xml:8: AAPT: error: resource string/menu_fast_scan (aka com.xk.netprobe:string/menu_fast_scan) not found.
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_CLEANIDS.txt
+═══════════════════════════════════════════════════

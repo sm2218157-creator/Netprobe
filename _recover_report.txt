@@ -1,0 +1,121 @@
+════════════════════════════════════════
+  v3.3 SOURCE RECOVERY INVENTORY
+  2026-10-14T17:30:11Z
+════════════════════════════════════════
+
+═══ 1. git reflog — كل الحركات ═══
+1e57a47 refs/remotes/origin/HEAD@{2026-10-13 07:54:42 +0000}: fetch
+1e57a47 refs/heads/main@{2026-10-13 07:54:13 +0000}: clone: from https://github.com/sm2218157-creator/Netprobe
+1e57a47 HEAD@{2026-10-13 07:54:13 +0000}: clone: from https://github.com/sm2218157-creator/Netprobe
+
+═══ 2. git fsck — كائنات معلقة (commits ضائعة) ═══
+dangling blob 05207916625b7da9b133cf7d1da53bccf440fa92
+dangling blob 0d3079f06e80d8449c2ee496833ff5476610626c
+dangling blob 123033a899c25b954d8fb63b0db9cf0a8980cd46
+dangling blob 13d0d6bfd1c7e718c249ddd5cb2f3510851d8c74
+dangling blob 17a02daf70698ee5bcea75e2b9d59cb0f1457311
+dangling blob 18800fac858a105d59be793a3824eb63ba08b42f
+dangling blob 1a002c440955cc1b049e1deebd58b41f74192109
+dangling blob 2580efdb04de02240ee8630d8e2272c85da14ecf
+dangling blob 2c200554a32d8a82aceb99b43209937695882579
+dangling blob 391044b5ec850fe1c2dcf780a5316d9a886f226b
+dangling blob 3d705c1ffd8d6bfe8e9d0f54168522a8d3c5ea8c
+dangling blob 4040fa78477489831a3f31729f6cc4548ec97b35
+dangling blob 4090138fe8a780f1c0a707964149509d6f0f9afc
+dangling blob 4750072909bfd498dc275d0604f8fff4986a0e28
+dangling blob 4c20833945bbcd08d0c84c50546aec53e7193397
+dangling blob 4c30667579bc621039ff5c96111e34191f9fc155
+dangling blob 51d038f0e783e9c29336e9a39ed5690680e2c784
+dangling blob 6a70f56f3abb7d5ec4241bb0816a421d4fc2cfbc
+dangling blob 70005c67643011c772935bbfc507a953ef6dceee
+dangling blob 7100e6dc4849ed7aa764a51d6092677be0b54af7
+dangling blob 8720ed7ea8b9c749e2bbdf4d4ac8982dfa9dda1d
+dangling blob 8700c3827134480ff9c5f68ef13b2c0d30476937
+dangling blob 89a0636ead454ced220dd64cea2d89c75b671903
+dangling blob 8aa035f870b1f779a135c9d6250d16a7ccde5c7a
+dangling blob 8cd06908fd9ed381e1703dbdaae54cb54119b0ff
+dangling blob 9190bd3ef1149fc295c14d36db0a1606d2069d9f
+dangling blob a0d003225c9b2429e4efa8ad910e96f5e358c06f
+dangling blob a9e0fef29d30714376c7f1f074ea253d5bc96223
+dangling blob ab10b4fcf4182f9180b2b5822d939d03b3175364
+dangling blob af10ddeb8c9ebb6f2d5a3c7ee194267d0155bcdb
+dangling blob b230c23eb1dec16890cbecbc1bf9e1f929337699
+dangling blob b320cc7bb1a2aca0ec95008941d3380e4e7dfaff
+dangling blob b4903791d7c00d4aa98c208d29b1d4ca3a905328
+dangling blob b6609afecc083d37706e422a8d0dd2f07985020e
+dangling blob bff0be7ed393e6917e6c3a56b38d38fae33268d7
+dangling blob bfa0ee0e0217c0531c374a0a41c1c62742e006ed
+dangling blob c23011034a3498ebfd999ab936972d81d14d2c13
+dangling blob c410773c28cd1a4e18721f42ea437a2e41137449
+dangling blob cd8020595f9013052c2843af578248599cdea5f4
+dangling blob dae0452046c032861c13a4e53d52a28f42cfd66d
+
+═══ 3. git stash — مقتنيات مخفية ═══
+
+═══ 4. كل الفروع والريموتات ═══
+* main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main
+origin	https://github.com/sm2218157-creator/Netprobe (fetch)
+origin	https://github.com/sm2218157-creator/Netprobe (push)
+
+═══ 5. محتويات NetProbe-v3.3.zip ═══
+Archive:  NetProbe-v3.3.zip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+  5561981  2026-10-14 14:43   NetProbe-v3.3.apk
+---------                     -------
+  5561981                     1 file
+
+═══ 6. نوع الملفات في الجذر ═══
+NetProbe-v3.3.apk: Android package (APK), with gradle app-metadata.properties, with APK Signing Block
+NetProbe-v3.3.zip: Zip archive data, at least v2.0 to extract, compression method=deflate
+-rw-rw-rw- 1 codespace codespace 5538007 Oct 14 07:24 NetProbe-v3.0.apk
+-rw-rw-rw- 1 codespace codespace 4557625 Oct 14 07:24 NetProbe-v3.0.zip
+-rw-rw-rw- 1 codespace codespace 5551726 Oct 14 07:39 NetProbe-v3.1.apk
+-rw-rw-rw- 1 codespace codespace 4570867 Oct 14 07:39 NetProbe-v3.1.zip
+-rw-rw-rw- 1 codespace codespace 5561981 Oct 14 14:43 NetProbe-v3.3.apk
+-rw-rw-rw- 1 codespace codespace 4577103 Oct 14 14:43 NetProbe-v3.3.zip
+-rw-rw-rw- 1 codespace codespace 5501335 Oct 14 17:18 NetProbe-v3.4.apk
+-rw-rw-rw- 1 codespace codespace 4547186 Oct 14 17:18 NetProbe-v3.4.zip
+
+═══ 7. النسخ الاحتياطية في الجذر ═══
+total 20
+drwxr-xr-x+ 4 codespace codespace 4096 Oct 14 17:09 .
+drwxrwxrwx+ 7 codespace root      4096 Oct 14 17:18 ..
+drwxr-xr-x+ 6 codespace codespace 4096 Oct 14 17:09 build
+-rw-rw-rw-  1 codespace codespace 1049 Oct 14 17:09 build.gradle
+drwxr-xr-x+ 3 codespace codespace 4096 Oct 14 17:09 src
+
+═══ 8. محتوى app.bak الأخير (هل فيه v3.3؟) ═══
+أحدث نسخة: app.bak.v33.1791997792
+app.bak.v33.1791997792/src/main/java/com/xk/netprobe/MainActivity.java
+app.bak.v33.1791997792/src/main/java/com/xk/netprobe/NmapRunner.java
+app.bak.v33.1791997792/src/main/java/com/xk/netprobe/PrivilegeManager.java
+app.bak.v33.1791997792/src/main/java/com/xk/netprobe/TerminalActivity.java
+app.bak.v33.1791997792/src/main/java/com/xk/netprobe/WifiScannerActivity.java
+
+═══ 9. مشاريع Netprobe أخرى على الجهاز ═══
+/workspaces/Netprobe
+/workspaces/netprobe
+
+═══ 10. ملفات v3.3 في مساحة العمل ═══
+/workspaces/Netprobe/NetProbe-v3.3.apk
+/workspaces/Netprobe/NetProbe-v3.3.zip
+/workspaces/netprobe/NetProbe-v3.3.apk
+/workspaces/netprobe/NetProbe-v3.3.zip
+
+═══ 11. اشتراكات git في مكان آخر (mirror) ═══
+/home/codespace/.oh-my-zsh/.git/config
+/workspaces/Netprobe/.git/config
+/workspaces/netprobe/.git/config
+
+═══ 12. APK v3.3 — قائمة الملفات داخله ═══
+  9516224  1981-01-01 01:01   classes.dex
+   490160  1981-01-01 01:01   classes2.dex
+    69148  1981-01-01 01:01   classes3.dex
+  1016780  1981-01-01 01:01   resources.arsc
+
+════════════════════════════════════════
+  END — راجع /workspaces/_recover_report.txt
+════════════════════════════════════════

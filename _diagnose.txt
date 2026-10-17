@@ -1,0 +1,121 @@
+═══ ما الذي فشل ═══
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+6 actionable tasks: 1 executed, 5 up-to-date
+
+═══ سبب الجذر ═══
+/tmp/fix.log:FAILURE: Build failed with an exception.
+/tmp/fix.log:Execution failed for task ':app:mergeDebugResources'.
+/workspaces/Netprobe/_rebuild_fix.log:Execution failed for task ':app:mergeDebugResources'.
+/workspaces/Netprobe/_rebuild_fix.log:FAILURE: Build failed with an exception.
+/workspaces/Netprobe/_rebuild_fix.log:Execution failed for task ':app:mergeDebugResources'.
+/workspaces/Netprobe/_rebuild_fix.log:═══ 6. معالجة AndroidManifest ═══
+/workspaces/Netprobe/_rebuild_fix.log:  🔧 حذف package= (يُستبدل بـ namespace في build.gradle)
+/workspaces/Netprobe/_rebuild_fix.log:FAILURE: Build failed with an exception.
+/workspaces/Netprobe/_rebuild_fix.log:Execution failed for task ':app:mergeDebugResources'.
+/workspaces/Netprobe/_rebuild_fix.log:FAILURE: Build failed with an exception.
+/workspaces/Netprobe/_rebuild_fix.log:Execution failed for task ':app:mergeDebugResources'.
+/workspaces/Netprobe/_rebuild_fix.log:Execution failed for task ':app:mergeDebugResources'.
+
+═══ الملفات التي بها أخطاء ═══
+
+═══ آخر 60 سطر من fix.log ═══
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Resource and asset merger: The file name must end with .xml
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+6 actionable tasks: 1 executed, 5 up-to-date
+
+═══ فحص المشروع ═══
+--- java count ---
+2950
+--- res dirs ---
+/workspaces/NetProbe_rebuilt/app/src/main/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/META-INF
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin
+--- manifest head ---
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="30"
+    android:versionName="3.0"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+   
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23"/>
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND"/>
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false"/>
+    <queries>
+        <package android:name="com.termux"/>
+        <package android:name="com.termux.api"/>
+        <package android:name="moe.shizuku.privileged.api"/>
+    </queries>
+    <permission
+        android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+--- assets ---
+total 8
+drwxrwxrwx+ 2 codespace codespace 4096 Oct 14 17:49 .
+drwxrwxrwx+ 5 codespace codespace 4096 Oct 14 17:49 ..

@@ -1,0 +1,52 @@
+═══ هل نجح البناء؟ ═══
+
+═══ APK النهائي؟ ═══
+
+═══ آخر 40 سطر من اللوج ═══
+8 actionable tasks: 5 executed, 3 from cache
+
+═══ 6. النتيجة ═══
+
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء mergeResources/AAPT ---
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+
+--- ملفات بها أخطاء ---
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1112
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1342
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1359
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1369
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1379
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1500
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:6945
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:6992
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7059
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7105
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7174
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7370
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7405
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7511
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7525
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7554
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7625
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7687
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7779
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7817
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7894
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7963
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8010
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8056
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8220
+
+اللوج الكامل: /workspaces/Netprobe/_clean_rebuild.log
+
+═══ أخطاء إن وُجدت ═══
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.

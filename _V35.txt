@@ -1,0 +1,46 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.5 — new icon + rebuild
+═══════════════════════════════════════════════════
+
+═══ 1. فحص apktool_out ═══
+  ✅ موجود
+
+═══ 2. حذف الأيقونات القديمة ═══
+  ✅
+
+═══ 3. إنشاء الأيقونة الجديدة (spider + lock) ═══
+  ✅ res/drawable/ic_launcher.xml
+  ✅ res/drawable/ic_launcher_round.xml
+
+═══ 4. فحص AndroidManifest ═══
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+    <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="false" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+
+═══ 5. البناء بـ apktool ═══
+I: Using Apktool 2.9.3
+I: Checking whether sources has changed...
+I: Checking whether sources has changed...
+I: Checking whether sources has changed...
+I: Checking whether resources has changed...
+I: Building resources...
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk into: /workspaces/NetProbe-v3.5.apk
+  ✅ APK: /workspaces/NetProbe-v3.5.apk
+-rw-rw-rw- 1 codespace codespace 5152588 Oct 15 13:49 /workspaces/NetProbe-v3.5.apk
+
+═══ 6. apksigner + zipalign ═══
+  apksigner: /home/codespace/android-sdk/build-tools/34.0.0/apksigner
+  zipalign : /home/codespace/android-sdk/build-tools/34.0.0/zipalign
+
+═══ 7. zipalign ═══
+  ✅
+
+═══ 8. التوقيع ═══
+
+═══ 9. ZIP ═══
+-rw-r--rw- 1 codespace codespace 5228778 Oct 15 13:49 /workspaces/NetProbe-v3.5.apk
+-rw-rw-rw- 1 codespace codespace 4247813 Oct 15 13:49 /workspaces/NetProbe-v3.5.zip
+
+═══ 10. حفظ المصدر ═══
+/workspaces/build_v35.sh: line 223: warning: here-document at line 207 delimited by end-of-file (wanted `RMEOF')

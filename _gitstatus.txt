@@ -1,0 +1,42 @@
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gradle/
+	NetProbe-v1.0.apk
+	NetProbe-v1.0.zip
+	NetProbe-v1.1.apk
+	NetProbe-v1.1.zip
+	NetProbe-v1.2.apk
+	NetProbe-v1.2.zip
+	NetProbe-v1.3.apk
+	NetProbe-v1.3.zip
+	NetProbe-v1.4.apk
+	NetProbe-v1.4.zip
+	NetProbe-v1.7.apk
+	NetProbe-v1.7.zip
+	NetProbe-v1.8.apk
+	NetProbe-v1.8.zip
+	NetProbe-v1.9.apk
+	NetProbe-v1.9.zip
+	NetProbe-v3.0.apk
+	NetProbe-v3.0.zip
+	NetProbe-v3.1.apk
+	NetProbe-v3.1.zip
+	NetProbe-v3.3.apk
+	NetProbe-v3.3.zip
+	_gitlog.txt
+	_gitstatus.txt
+	app/
+	build.gradle
+	build/
+	gradle.properties
+	gradle/
+	gradlew
+	gradlew.bat
+	init_dirs.sh
+	local.properties
+	settings.gradle
+
+nothing added to commit but untracked files present (use "git add" to track)

@@ -1,0 +1,385 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — rebuild from decompiled source
+═══════════════════════════════════════════════════
+
+═══ 1. فحص مخرجات الفك ═══
+  عدد ملفات .java في jadx_out: 2952
+
+  --- حزم NetProbe المكتشفة ---
+
+  --- كل الحزم الرئيسية ---
+android/support/v4/app
+android/support/v4/graphics/drawable
+android/support/v4/os
+androidx/activity
+androidx/activity/contextaware
+androidx/activity/result
+androidx/activity/result/contract
+androidx/annotation
+androidx/annotation/experimental
+androidx/appcompat
+androidx/appcompat/app
+androidx/appcompat/content/res
+androidx/appcompat/graphics/drawable
+androidx/appcompat/resources
+androidx/appcompat/text
+androidx/appcompat/view
+androidx/appcompat/view/menu
+androidx/appcompat/widget
+androidx/arch/core
+androidx/arch/core/executor
+androidx/arch/core/internal
+androidx/arch/core/util
+androidx/cardview
+androidx/cardview/widget
+androidx/collection
+androidx/concurrent/futures
+androidx/constraintlayout/helper/widget
+androidx/constraintlayout/motion/utils
+androidx/constraintlayout/motion/widget
+androidx/constraintlayout/solver
+
+═══ 2. إنشاء مشروع Gradle نظيف ═══
+
+═══ 3. نسخ المصدر ═══
+  ✅ من jadx_out/sources
+
+═══ 4. حذف R.java و BuildConfig (سيُعاد توليدها) ═══
+  ✅
+
+═══ 5. نسخ الموارد ═══
+  ✅ من jadx_out/resources
+
+═══ 6. نسخ AndroidManifest ═══
+  ✅ من jadx
+
+═══ 7. نسخ المكتبات والأصول ═══
+
+═══ 8. كتابة ملفات Gradle ═══
+  ✅
+
+═══ 9. جرد المشروع الجديد ═══
+
+--- Java sources ---
+2950
+/workspaces/NetProbe_rebuilt/app/src/main/java/android/support/v4/app/INotificationSideChannel.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/android/support/v4/app/RemoteActionCompatParcelizer.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/android/support/v4/graphics/drawable/IconCompatParcelizer.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/android/support/v4/os/IResultReceiver.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/android/support/v4/os/ResultReceiver.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/Api34Impl.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/BackEventCompat.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/C0014R.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/Cancellable.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/ComponentActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/ComponentDialog.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdge.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeApi21.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeApi23.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeApi26.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeApi29.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeBase.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/EdgeToEdgeImpl.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/FullyDrawnReporter.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/FullyDrawnReporterKt$reportWhenComplete$1.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/FullyDrawnReporterKt.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/FullyDrawnReporterOwner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/ImmLeaksCleaner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedCallback.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedDispatcher$addCallback$1.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedDispatcher$addCancellableCallback$1.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedDispatcher.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedDispatcherKt.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/OnBackPressedDispatcherOwner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/SystemBarStyle.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/ViewTreeFullyDrawnReporterOwner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/ViewTreeOnBackPressedDispatcherOwner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/ContextAware.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/ContextAwareHelper.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$1.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/ContextAwareKt$withContextAvailable$2$listener$1.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/ContextAwareKt.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/contextaware/OnContextAvailableListener.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResult.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResultCallback.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResultCaller.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResultLauncher.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResultRegistry.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/ActivityResultRegistryOwner.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/IntentSenderRequest.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/PickVisualMediaRequest.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/PickVisualMediaRequestKt.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/contract/ActivityResultContract.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/activity/result/contract/ActivityResultContracts.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/AnimRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/AnimatorRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/AnyRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/AnyThread.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/ArrayRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/AttrRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/BinderThread.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/BoolRes.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/CallSuper.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/CheckResult.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/annotation/ChecksSdkIntAtLeast.java
+
+--- Resources ---
+/workspaces/NetProbe_rebuilt/app/src/main/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/META-INF
+/workspaces/NetProbe_rebuilt/app/src/main/res/META-INF/com
+/workspaces/NetProbe_rebuilt/app/src/main/res/META-INF/services
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/annotation
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/collections
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/coroutines
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/internal
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/ranges
+/workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/reflect
+/workspaces/NetProbe_rebuilt/app/src/main/res/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/anim
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/animator
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/color
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/color-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/color-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/drawable-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/interpolator
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/layout
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/layout-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/layout-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/layout-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/layout-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/menu
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-af
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-am
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ar
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-as
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-az
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-b+es+419
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-b+sr+Latn
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-be
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-bg
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-bn
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-bs
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ca
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-cs
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-da
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-de
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-el
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-en-rAU
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-en-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-en-rGB
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-en-rIN
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-en-rXC
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-es
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-es-rUS
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-et
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-eu
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-fa
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-fi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-fr
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-fr-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-gl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-gu
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-h320dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-h360dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-h480dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-h550dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-h720dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-hi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-hr
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-hu
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-hy
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-in
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-is
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-it
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-iw
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ja
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ka
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-kk
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-km
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-kn
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ko
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ky
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-large
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-lo
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-lt
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-lv
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-mk
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ml
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-mn
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-mr
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ms
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-my
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-nb
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ne
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-nl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-or
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-pa
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-pl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-pt
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-pt-rBR
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-pt-rPT
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ro
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ru
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-si
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sk
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-small
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sq
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sr
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sv
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sw
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ta
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-te
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-th
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-tl
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-tr
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-uk
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-ur
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-uz
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-v25
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-v28
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-v34
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-vi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-w320dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-w360dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-w400dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-w600dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-xlarge
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-zh-rCN
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-zh-rHK
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-zh-rTW
+/workspaces/NetProbe_rebuilt/app/src/main/res/res/values-zu
+
+--- Assets ---
+
+--- jniLibs ---
+
+--- Manifest (أول 60 سطر) ---
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="30"
+    android:versionName="3.0"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.xk.netprobe"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23"/>
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND"/>
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false"/>
+    <queries>
+        <package android:name="com.termux"/>
+        <package android:name="com.termux.api"/>
+        <package android:name="moe.shizuku.privileged.api"/>
+    </queries>
+    <permission
+        android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher"
+        android:debuggable="true"
+        android:allowBackup="false"
+        android:supportsRtl="true"
+        android:extractNativeLibs="false"
+        android:usesCleartextTraffic="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <activity
+            android:name="com.p000xk.netprobe.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.p000xk.netprobe.MainActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.p000xk.netprobe.JavaScannerActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.p000xk.netprobe.DiscoveryActivity"
+            android:exported="false"/>
+
+═══ 10. البناء ═══
+> Task :app:clean UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Resource and asset merger: The file name must end with .xml
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s
+6 actionable tasks: 3 executed, 2 from cache, 1 up-to-date
+
+═══════════════════════════════════════════════════
+  ❌ البناء فشل — أخطاء:
+═══════════════════════════════════════════════════
+FAILURE: Build failed with an exception.
+* What went wrong:
+
+  السجل الكامل: /tmp/rebuild.log

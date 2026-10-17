@@ -1,0 +1,40 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.4 — sign + zip
+═══════════════════════════════════════════════════
+
+═══ 1. فحص APK ═══
+-rw-rw-rw- 1 codespace codespace 5151991 Oct 14 19:33 /workspaces/NetProbe-v3.4.apk
+
+═══ 2. فحص apksigner + zipalign ═══
+  apksigner: /home/codespace/android-sdk/build-tools/34.0.0/apksigner
+  zipalign : /home/codespace/android-sdk/build-tools/34.0.0/zipalign
+
+═══ 3. build-tools متوفرة ═══
+  ✅ لا يحتاج تنزيل
+
+═══ 4. keystore ═══
+  ✅ موجود: /workspaces/debug.keystore
+
+═══ 5. zipalign ═══
+  ✅ zipalign تم
+
+═══ 6. التوقيع ═══
+
+  --- verify ---
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): true
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+  exit: 0
+
+═══ 7. حزمة ZIP ═══
+
+═══════════════════════════════════════════════════
+  ✅ DONE
+-rw-r--rw- 1 codespace codespace 5228698 Oct 14 19:49 /workspaces/NetProbe-v3.4.apk
+-rw-rw-rw- 1 codespace codespace 4247459 Oct 14 19:49 /workspaces/NetProbe-v3.4.zip
+═══════════════════════════════════════════════════

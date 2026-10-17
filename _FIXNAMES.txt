@@ -1,0 +1,261 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — fix invalid resource names
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: إعادة تسمية ملفات تبدأ بـ $ ═══
+  عدد الملفات: 40
+  ✔ $mtrl_checkbox_button_icon_checked_unchecked__2.xml → _mtrl_checkbox_button_icon_checked_unchecked__2.xml
+  ✔ $avd_show_password__2.xml → _avd_show_password__2.xml
+  ✔ $avd_hide_password__0.xml → _avd_hide_password__0.xml
+  ✔ $mtrl_checkbox_button_unchecked_checked__1.xml → _mtrl_checkbox_button_unchecked_checked__1.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_checked__0.xml → _mtrl_checkbox_button_icon_unchecked_checked__0.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_indeterminate__1.xml → _mtrl_checkbox_button_icon_unchecked_indeterminate__1.xml
+  ✔ $avd_show_password__0.xml → _avd_show_password__0.xml
+  ✔ $mtrl_checkbox_button_checked_unchecked__0.xml → _mtrl_checkbox_button_checked_unchecked__0.xml
+  ✔ $mtrl_checkbox_button_icon_indeterminate_unchecked__1.xml → _mtrl_checkbox_button_icon_indeterminate_unchecked__1.xml
+  ✔ $avd_hide_password__2.xml → _avd_hide_password__2.xml
+  ✔ $mtrl_checkbox_button_checked_unchecked__2.xml → _mtrl_checkbox_button_checked_unchecked__2.xml
+  ✔ $mtrl_switch_thumb_pressed_unchecked__0.xml → _mtrl_switch_thumb_pressed_unchecked__0.xml
+  ✔ $mtrl_checkbox_button_checked_unchecked__1.xml → _mtrl_checkbox_button_checked_unchecked__1.xml
+  ✔ $mtrl_switch_thumb_checked_unchecked__1.xml → _mtrl_switch_thumb_checked_unchecked__1.xml
+  ✔ $avd_hide_password__1.xml → _avd_hide_password__1.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_checked__2.xml → _mtrl_checkbox_button_icon_unchecked_checked__2.xml
+  ✔ $mtrl_checkbox_button_icon_indeterminate_unchecked__2.xml → _mtrl_checkbox_button_icon_indeterminate_unchecked__2.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_indeterminate__2.xml → _mtrl_checkbox_button_icon_unchecked_indeterminate__2.xml
+  ✔ $mtrl_checkbox_button_icon_indeterminate_unchecked__0.xml → _mtrl_checkbox_button_icon_indeterminate_unchecked__0.xml
+  ✔ $mtrl_switch_thumb_checked_unchecked__0.xml → _mtrl_switch_thumb_checked_unchecked__0.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_checked__1.xml → _mtrl_checkbox_button_icon_unchecked_checked__1.xml
+  ✔ $mtrl_checkbox_button_icon_indeterminate_checked__0.xml → _mtrl_checkbox_button_icon_indeterminate_checked__0.xml
+  ✔ $m3_avd_show_password__1.xml → _m3_avd_show_password__1.xml
+  ✔ $mtrl_checkbox_button_icon_checked_unchecked__1.xml → _mtrl_checkbox_button_icon_checked_unchecked__1.xml
+  ✔ $m3_avd_hide_password__2.xml → _m3_avd_hide_password__2.xml
+  ✔ $avd_show_password__1.xml → _avd_show_password__1.xml
+  ✔ $mtrl_checkbox_button_icon_checked_indeterminate__0.xml → _mtrl_checkbox_button_icon_checked_indeterminate__0.xml
+  ✔ $m3_avd_hide_password__0.xml → _m3_avd_hide_password__0.xml
+  ✔ $mtrl_checkbox_button_icon_checked_unchecked__0.xml → _mtrl_checkbox_button_icon_checked_unchecked__0.xml
+  ✔ $mtrl_checkbox_button_unchecked_checked__0.xml → _mtrl_checkbox_button_unchecked_checked__0.xml
+  ✔ $mtrl_switch_thumb_checked_pressed__0.xml → _mtrl_switch_thumb_checked_pressed__0.xml
+  ✔ $m3_avd_show_password__2.xml → _m3_avd_show_password__2.xml
+  ✔ $mtrl_switch_thumb_unchecked_checked__1.xml → _mtrl_switch_thumb_unchecked_checked__1.xml
+  ✔ $m3_avd_hide_password__1.xml → _m3_avd_hide_password__1.xml
+  ✔ $mtrl_switch_thumb_unchecked_pressed__0.xml → _mtrl_switch_thumb_unchecked_pressed__0.xml
+  ✔ $mtrl_checkbox_button_unchecked_checked__2.xml → _mtrl_checkbox_button_unchecked_checked__2.xml
+  ✔ $m3_avd_show_password__0.xml → _m3_avd_show_password__0.xml
+  ✔ $mtrl_checkbox_button_icon_unchecked_indeterminate__0.xml → _mtrl_checkbox_button_icon_unchecked_indeterminate__0.xml
+  ✔ $mtrl_switch_thumb_unchecked_checked__0.xml → _mtrl_switch_thumb_unchecked_checked__0.xml
+  ✔ $mtrl_switch_thumb_pressed_checked__0.xml → _mtrl_switch_thumb_pressed_checked__0.xml
+
+═══ PHASE 2: تحديث المراجع @drawable/$x و @layout/$x ═══
+  تحديث 40 اسم
+    $mtrl_switch_thumb_checked_unchecked__0 → _mtrl_switch_thumb_checked_unchecked__0
+    $mtrl_switch_thumb_unchecked_pressed__0 → _mtrl_switch_thumb_unchecked_pressed__0
+    $mtrl_switch_thumb_pressed_unchecked__0 → _mtrl_switch_thumb_pressed_unchecked__0
+    $mtrl_checkbox_button_icon_indeterminate_checked__0 → _mtrl_checkbox_button_icon_indeterminate_checked__0
+    $avd_hide_password__2 → _avd_hide_password__2
+  ✅ fixed 0 files
+
+═══ PHASE 3: إصلاح أي أسماء غير صالحة أخرى ═══
+  ✔ abc_textfield_search_default_mtrl_alpha.9.png → abc_textfield_search_default_mtrl_alpha_9.png
+  ✔ notification_bg_normal_pressed.9.png → notification_bg_normal_pressed_9.png
+  ✔ abc_ab_share_pack_mtrl_alpha.9.png → abc_ab_share_pack_mtrl_alpha_9.png
+  ✔ abc_scrubber_track_mtrl_alpha.9.png → abc_scrubber_track_mtrl_alpha_9.png
+  ✔ notification_bg_low_pressed.9.png → notification_bg_low_pressed_9.png
+  ✔ notification_bg_low_normal.9.png → notification_bg_low_normal_9.png
+  ✔ abc_list_selector_disabled_holo_dark.9.png → abc_list_selector_disabled_holo_dark_9.png
+  ✔ abc_tab_indicator_mtrl_alpha.9.png → abc_tab_indicator_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00012.9.png → abc_btn_switch_to_on_mtrl_00012_9.png
+  ✔ abc_list_longpressed_holo.9.png → abc_list_longpressed_holo_9.png
+  ✔ abc_popup_background_mtrl_mult.9.png → abc_popup_background_mtrl_mult_9.png
+  ✔ abc_switch_track_mtrl_alpha.9.png → abc_switch_track_mtrl_alpha_9.png
+  ✔ notification_bg_normal.9.png → notification_bg_normal_9.png
+  ✔ abc_textfield_search_activated_mtrl_alpha.9.png → abc_textfield_search_activated_mtrl_alpha_9.png
+  ✔ abc_list_selector_disabled_holo_light.9.png → abc_list_selector_disabled_holo_light_9.png
+  ✔ abc_cab_background_top_mtrl_alpha.9.png → abc_cab_background_top_mtrl_alpha_9.png
+  ✔ abc_list_pressed_holo_light.9.png → abc_list_pressed_holo_light_9.png
+  ✔ abc_list_focused_holo.9.png → abc_list_focused_holo_9.png
+  ✔ abc_scrubber_primary_mtrl_alpha.9.png → abc_scrubber_primary_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00001.9.png → abc_btn_switch_to_on_mtrl_00001_9.png
+  ✔ abc_textfield_default_mtrl_alpha.9.png → abc_textfield_default_mtrl_alpha_9.png
+  ✔ abc_textfield_activated_mtrl_alpha.9.png → abc_textfield_activated_mtrl_alpha_9.png
+  ✔ abc_menu_hardkey_panel_mtrl_mult.9.png → abc_menu_hardkey_panel_mtrl_mult_9.png
+  ✔ abc_list_pressed_holo_dark.9.png → abc_list_pressed_holo_dark_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_list_divider_mtrl_alpha.9.png → abc_list_divider_mtrl_alpha_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_tab_indicator_mtrl_alpha.9.png → abc_tab_indicator_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00012.9.png → abc_btn_switch_to_on_mtrl_00012_9.png
+  ✔ abc_switch_track_mtrl_alpha.9.png → abc_switch_track_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00001.9.png → abc_btn_switch_to_on_mtrl_00001_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_textfield_search_default_mtrl_alpha.9.png → abc_textfield_search_default_mtrl_alpha_9.png
+  ✔ notification_bg_normal_pressed.9.png → notification_bg_normal_pressed_9.png
+  ✔ abc_ab_share_pack_mtrl_alpha.9.png → abc_ab_share_pack_mtrl_alpha_9.png
+  ✔ abc_scrubber_track_mtrl_alpha.9.png → abc_scrubber_track_mtrl_alpha_9.png
+  ✔ notification_bg_low_pressed.9.png → notification_bg_low_pressed_9.png
+  ✔ notification_bg_low_normal.9.png → notification_bg_low_normal_9.png
+  ✔ abc_list_selector_disabled_holo_dark.9.png → abc_list_selector_disabled_holo_dark_9.png
+  ✔ abc_tab_indicator_mtrl_alpha.9.png → abc_tab_indicator_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00012.9.png → abc_btn_switch_to_on_mtrl_00012_9.png
+  ✔ abc_list_longpressed_holo.9.png → abc_list_longpressed_holo_9.png
+  ✔ abc_popup_background_mtrl_mult.9.png → abc_popup_background_mtrl_mult_9.png
+  ✔ abc_switch_track_mtrl_alpha.9.png → abc_switch_track_mtrl_alpha_9.png
+  ✔ notification_bg_normal.9.png → notification_bg_normal_9.png
+  ✔ abc_textfield_search_activated_mtrl_alpha.9.png → abc_textfield_search_activated_mtrl_alpha_9.png
+  ✔ abc_list_selector_disabled_holo_light.9.png → abc_list_selector_disabled_holo_light_9.png
+  ✔ abc_cab_background_top_mtrl_alpha.9.png → abc_cab_background_top_mtrl_alpha_9.png
+  ✔ abc_list_pressed_holo_light.9.png → abc_list_pressed_holo_light_9.png
+  ✔ abc_list_focused_holo.9.png → abc_list_focused_holo_9.png
+  ✔ abc_scrubber_primary_mtrl_alpha.9.png → abc_scrubber_primary_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00001.9.png → abc_btn_switch_to_on_mtrl_00001_9.png
+  ✔ abc_textfield_default_mtrl_alpha.9.png → abc_textfield_default_mtrl_alpha_9.png
+  ✔ abc_textfield_activated_mtrl_alpha.9.png → abc_textfield_activated_mtrl_alpha_9.png
+  ✔ abc_menu_hardkey_panel_mtrl_mult.9.png → abc_menu_hardkey_panel_mtrl_mult_9.png
+  ✔ abc_list_pressed_holo_dark.9.png → abc_list_pressed_holo_dark_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_list_divider_mtrl_alpha.9.png → abc_list_divider_mtrl_alpha_9.png
+  ✔ abc_textfield_search_default_mtrl_alpha.9.png → abc_textfield_search_default_mtrl_alpha_9.png
+  ✔ abc_ab_share_pack_mtrl_alpha.9.png → abc_ab_share_pack_mtrl_alpha_9.png
+  ✔ abc_scrubber_track_mtrl_alpha.9.png → abc_scrubber_track_mtrl_alpha_9.png
+  ✔ abc_list_selector_disabled_holo_dark.9.png → abc_list_selector_disabled_holo_dark_9.png
+  ✔ abc_tab_indicator_mtrl_alpha.9.png → abc_tab_indicator_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00012.9.png → abc_btn_switch_to_on_mtrl_00012_9.png
+  ✔ abc_list_longpressed_holo.9.png → abc_list_longpressed_holo_9.png
+  ✔ abc_popup_background_mtrl_mult.9.png → abc_popup_background_mtrl_mult_9.png
+  ✔ abc_switch_track_mtrl_alpha.9.png → abc_switch_track_mtrl_alpha_9.png
+  ✔ abc_textfield_search_activated_mtrl_alpha.9.png → abc_textfield_search_activated_mtrl_alpha_9.png
+  ✔ abc_list_selector_disabled_holo_light.9.png → abc_list_selector_disabled_holo_light_9.png
+  ✔ abc_cab_background_top_mtrl_alpha.9.png → abc_cab_background_top_mtrl_alpha_9.png
+  ✔ abc_list_pressed_holo_light.9.png → abc_list_pressed_holo_light_9.png
+  ✔ abc_list_focused_holo.9.png → abc_list_focused_holo_9.png
+  ✔ abc_scrubber_primary_mtrl_alpha.9.png → abc_scrubber_primary_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00001.9.png → abc_btn_switch_to_on_mtrl_00001_9.png
+  ✔ abc_textfield_default_mtrl_alpha.9.png → abc_textfield_default_mtrl_alpha_9.png
+  ✔ abc_textfield_activated_mtrl_alpha.9.png → abc_textfield_activated_mtrl_alpha_9.png
+  ✔ abc_menu_hardkey_panel_mtrl_mult.9.png → abc_menu_hardkey_panel_mtrl_mult_9.png
+  ✔ abc_list_pressed_holo_dark.9.png → abc_list_pressed_holo_dark_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_list_divider_mtrl_alpha.9.png → abc_list_divider_mtrl_alpha_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_textfield_search_default_mtrl_alpha.9.png → abc_textfield_search_default_mtrl_alpha_9.png
+  ✔ notification_bg_normal_pressed.9.png → notification_bg_normal_pressed_9.png
+  ✔ abc_ab_share_pack_mtrl_alpha.9.png → abc_ab_share_pack_mtrl_alpha_9.png
+  ✔ abc_scrubber_track_mtrl_alpha.9.png → abc_scrubber_track_mtrl_alpha_9.png
+  ✔ notification_bg_low_pressed.9.png → notification_bg_low_pressed_9.png
+  ✔ notification_bg_low_normal.9.png → notification_bg_low_normal_9.png
+  ✔ abc_list_selector_disabled_holo_dark.9.png → abc_list_selector_disabled_holo_dark_9.png
+  ✔ abc_tab_indicator_mtrl_alpha.9.png → abc_tab_indicator_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00012.9.png → abc_btn_switch_to_on_mtrl_00012_9.png
+  ✔ abc_list_longpressed_holo.9.png → abc_list_longpressed_holo_9.png
+  ✔ abc_popup_background_mtrl_mult.9.png → abc_popup_background_mtrl_mult_9.png
+  ✔ abc_switch_track_mtrl_alpha.9.png → abc_switch_track_mtrl_alpha_9.png
+  ✔ notification_bg_normal.9.png → notification_bg_normal_9.png
+  ✔ abc_textfield_search_activated_mtrl_alpha.9.png → abc_textfield_search_activated_mtrl_alpha_9.png
+  ✔ abc_list_selector_disabled_holo_light.9.png → abc_list_selector_disabled_holo_light_9.png
+  ✔ abc_cab_background_top_mtrl_alpha.9.png → abc_cab_background_top_mtrl_alpha_9.png
+  ✔ abc_list_pressed_holo_light.9.png → abc_list_pressed_holo_light_9.png
+  ✔ abc_list_focused_holo.9.png → abc_list_focused_holo_9.png
+  ✔ abc_scrubber_primary_mtrl_alpha.9.png → abc_scrubber_primary_mtrl_alpha_9.png
+  ✔ abc_btn_switch_to_on_mtrl_00001.9.png → abc_btn_switch_to_on_mtrl_00001_9.png
+  ✔ abc_textfield_default_mtrl_alpha.9.png → abc_textfield_default_mtrl_alpha_9.png
+  ✔ abc_textfield_activated_mtrl_alpha.9.png → abc_textfield_activated_mtrl_alpha_9.png
+  ✔ abc_menu_hardkey_panel_mtrl_mult.9.png → abc_menu_hardkey_panel_mtrl_mult_9.png
+  ✔ abc_list_pressed_holo_dark.9.png → abc_list_pressed_holo_dark_9.png
+  ✔ abc_spinner_mtrl_am_alpha.9.png → abc_spinner_mtrl_am_alpha_9.png
+  ✔ abc_list_divider_mtrl_alpha.9.png → abc_list_divider_mtrl_alpha_9.png
+  إجمالي: 110
+
+═══ PHASE 4: حذف بقايا ═══
+
+═══ PHASE 5: فحص الأسماء المتبقية ═══
+  ✅ كل الأسماء صالحة
+
+═══ PHASE 6: البناء ═══
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:1892:4: Duplicate value for resource 'attr/autoSizeTextType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:91: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:1956:4: Duplicate value for resource 'attr/actionBarSize' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:6: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:6992:4: Duplicate value for resource 'attr/badgeGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:121: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7059:4: Duplicate value for resource 'attr/showAnimationBehavior' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1446: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7105:4: Duplicate value for resource 'attr/fabAlignmentMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:650: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7174:4: Duplicate value for resource 'attr/behavior_peekHeight' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:162: .
+/workspaces/NetProbe_rebuilt/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml:10643: Duplicate value for resource 'attr/carousel_alignment' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:243: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2323:4: Duplicate value for resource 'attr/checkMarkTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:251: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7370:4: Duplicate value for resource 'attr/indicatorDirectionCircular' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:833: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7405:4: Duplicate value for resource 'attr/titleTextEllipsize' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1731: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7511:4: Duplicate value for resource 'attr/layout_collapseMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:930: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2351:4: Duplicate value for resource 'attr/buttonTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:227: .
+/home/codespace/.gradle/caches/8.10.2/transforms/89e23ab819661c786d051f50214172af/transformed/coordinatorlayout-1.1.0/res/values/values.xml:16:4: Duplicate value for resource 'attr/layout_anchorGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:913: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7525:4: Duplicate value for resource 'attr/extendStrategy' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:639: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7554:4: Duplicate value for resource 'attr/fabSize' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:667: .
+/home/codespace/.gradle/caches/8.10.2/transforms/dee8f93137f790b98e7fbc612a956cb8/transformed/core-1.12.0/res/values/values.xml:122:4: Duplicate value for resource 'attr/fontProviderFetchStrategy' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:753: .
+/home/codespace/.gradle/caches/8.10.2/transforms/dee8f93137f790b98e7fbc612a956cb8/transformed/core-1.12.0/res/values/values.xml:155:4: Duplicate value for resource 'attr/fontStyle' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:763: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1112:4: Duplicate value for resource 'attr/keyPositionType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:881: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2397:4: Duplicate value for resource 'attr/showDividers' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1459: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7625:4: Duplicate value for resource 'attr/indeterminateAnimationType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:827: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7687:4: Duplicate value for resource 'attr/iconGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:805: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7779:4: Duplicate value for resource 'attr/checkedIconGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:264: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7817:4: Duplicate value for resource 'attr/buttonIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:215: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7894:4: Duplicate value for resource 'attr/thumbIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1668: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7963:4: Duplicate value for resource 'attr/logoScaleType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1133: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2454:4: Duplicate value for resource 'attr/alphabeticModifiers' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:50: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1342:4: Duplicate value for resource 'attr/motionDebug' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1226: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1359:4: Duplicate value for resource 'attr/telltales_velocityMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1602: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8010:4: Duplicate value for resource 'attr/labelVisibilityMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:896: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8056:4: Duplicate value for resource 'attr/menuGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1210: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1369:4: Duplicate value for resource 'attr/clickAction' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:307: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1379:4: Duplicate value for resource 'attr/nestedScrollFlags' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1289: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8220:4: Duplicate value for resource 'attr/cornerFamily' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:437: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8294:4: Duplicate value for resource 'attr/labelBehavior' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:889: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8359:4: Duplicate value for resource 'attr/animationMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:70: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2661:4: Duplicate value for resource 'attr/thumbTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1681: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8395:4: Duplicate value for resource 'attr/tabIndicatorGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1571: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8492:4: Duplicate value for resource 'attr/errorIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:606: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2747:4: Duplicate value for resource 'attr/buttonGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:207: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1500:4: Duplicate value for resource 'attr/autoTransition' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:95: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2814:4: Duplicate value for resource 'attr/backgroundTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:113: .
+
+> Task :app:mergeDebugResources FAILED
+> Task :app:packageDebugResources
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+   > Resource compilation failed (Failed to compile values resource file /workspaces/NetProbe_rebuilt/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@359411b7) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5c655513) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5751d7c5) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3b9cdfae) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2e9078c3) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@582b6dcf) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@11d66f0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5c21a8d2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@715a95f5) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@729ccb04) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@185c1941) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@496a45a0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6c3a8445) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@78eab62d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@842e60) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1bd82c95) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@23f89b07) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e0e1a8b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2fd8d204) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@75beffee) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@127972fd) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6c5df87b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@57c4f06) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7bf81c8) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5e08e558) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5d1540c2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3af63019) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@413c574e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@58874814) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2f630096) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@241e9b9b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7bb2e71) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@651e117a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@52cedaff) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@25c517e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5cca3fe2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@494a60c0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6d775234) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@d402945) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@782220) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1a2e1e8f) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4d1f190c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@41991beb) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@b148da) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6a81e425) to table.). Check logs for more details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 5s
+8 actionable tasks: 5 executed, 3 from cache
+
+═══ PHASE 7: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء mergeResources ---
+
+--- أخطاء الموارد ---
+
+--- أخطاء Java ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+   > Resource compilation failed (Failed to compile values resource file /workspaces/NetProbe_rebuilt/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@359411b7) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5c655513) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5751d7c5) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3b9cdfae) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2e9078c3) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@582b6dcf) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@11d66f0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5c21a8d2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@715a95f5) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@729ccb04) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@185c1941) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@496a45a0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6c3a8445) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@78eab62d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@842e60) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1bd82c95) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@23f89b07) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e0e1a8b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2fd8d204) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@75beffee) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@127972fd) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6c5df87b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@57c4f06) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7bf81c8) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5e08e558) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5d1540c2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3af63019) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@413c574e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@58874814) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2f630096) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@241e9b9b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7bb2e71) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@651e117a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@52cedaff) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@25c517e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5cca3fe2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@494a60c0) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6d775234) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@d402945) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@782220) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1a2e1e8f) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4d1f190c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@41991beb) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@b148da) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6a81e425) to table.). Check logs for more details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_FIXNAMES.txt
+═══════════════════════════════════════════════════

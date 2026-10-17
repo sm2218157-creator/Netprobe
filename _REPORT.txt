@@ -1,0 +1,474 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — NUKE & REBUILD
+  2026-10-14T18:01:20Z
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: BUGS IN RES ═══
+--- ALL non-.xml files under res/ ---
+
+--- Directories at res/ level ---
+/workspaces/NetProbe_rebuilt/app/src/main/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/anim
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator
+/workspaces/NetProbe_rebuilt/app/src/main/res/color
+/workspaces/NetProbe_rebuilt/app/src/main/res/color-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/color-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/interpolator
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/menu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-af
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-am
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ar
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-as
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-az
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-b+es+419
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-b+sr+Latn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-be
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bg
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bs
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ca
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-cs
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-da
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-de
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-el
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rAU
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rGB
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rIN
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rXC
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-es
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-es-rUS
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-et
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-eu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fa
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fr-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-gl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-gu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h320dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h360dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h480dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h550dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h720dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hy
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-in
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-is
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-it
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-iw
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ja
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ka
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-kk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-km
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-kn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ko
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ky
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-large
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lo
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lt
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lv
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ml
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ms
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-my
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-nb
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ne
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-nl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-or
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pa
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt-rBR
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt-rPT
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ro
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ru
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-si
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-small
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sq
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sv
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sw
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ta
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-te
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-th
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-tl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-tr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-uk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ur
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-uz
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v25
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v28
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v34
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-vi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w320dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w360dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w400dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w600dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xlarge
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rCN
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rHK
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rTW
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zu
+
+--- Files with dots in name (suspects) ---
+
+═══ PHASE 2: PURGE JUNK FROM res/ ═══
+
+--- res/ after purge ---
+/workspaces/NetProbe_rebuilt/app/src/main/res
+/workspaces/NetProbe_rebuilt/app/src/main/res/anim
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator
+/workspaces/NetProbe_rebuilt/app/src/main/res/color
+/workspaces/NetProbe_rebuilt/app/src/main/res/color-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/color-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/drawable-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/interpolator
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/menu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-af
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-am
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ar
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-as
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-az
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-b+es+419
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-b+sr+Latn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-be
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bg
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-bs
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ca
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-cs
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-da
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-de
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-el
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rAU
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rGB
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rIN
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-en-rXC
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-es
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-es-rUS
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-et
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-eu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fa
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-fr-rCA
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-gl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-gu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h320dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h360dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h480dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h550dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-h720dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hu
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-hy
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-in
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-is
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-it
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-iw
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ja
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ka
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-kk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-km
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-kn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ko
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ky
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-large
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-hdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ldrtl-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lo
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lt
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-lv
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ml
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mn
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-mr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ms
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-my
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-nb
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ne
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-night
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-nl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-or
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pa
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt-rBR
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-pt-rPT
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ro
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ru
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-si
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-small
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sq
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sv
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sw
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-sw600dp
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ta
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-te
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-th
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-tl
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-tr
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-uk
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-ur
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-uz
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v25
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v26
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v28
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v31
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-v34
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-vi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w320dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w360dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w400dp-port
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-w600dp-land
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-watch
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xlarge
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-xxxhdpi
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rCN
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rHK
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zh-rTW
+/workspaces/NetProbe_rebuilt/app/src/main/res/values-zu
+--- total files ---
+1020
+
+═══ PHASE 3: MANIFEST CLEANUP ═══
+  ✅ manifest cleaned
+--- manifest head ---
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23"/>
+    <uses-permission android:name="com.termux.permission.RUN_COMMAND"/>
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false"/>
+    <queries>
+        <package android:name="com.termux"/>
+        <package android:name="com.termux.api"/>
+        <package android:name="moe.shizuku.privileged.api"/>
+    </queries>
+    <permission
+        android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <application
+
+═══ PHASE 4: BUILD ═══
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7554:4: Duplicate value for resource 'attr/fabSize' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1067: .
+/home/codespace/.gradle/caches/8.10.2/transforms/dee8f93137f790b98e7fbc612a956cb8/transformed/core-1.12.0/res/values/values.xml:122:4: Duplicate value for resource 'attr/fontProviderFetchStrategy' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1188: .
+/home/codespace/.gradle/caches/8.10.2/transforms/dee8f93137f790b98e7fbc612a956cb8/transformed/core-1.12.0/res/values/values.xml:155:4: Duplicate value for resource 'attr/fontStyle' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1201: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1112:4: Duplicate value for resource 'attr/keyPositionType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1397: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2397:4: Duplicate value for resource 'attr/showDividers' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:2249: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7625:4: Duplicate value for resource 'attr/indeterminateAnimationType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1303: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7687:4: Duplicate value for resource 'attr/iconGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1275: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7779:4: Duplicate value for resource 'attr/checkedIconGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:413: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7817:4: Duplicate value for resource 'attr/buttonIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:343: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7894:4: Duplicate value for resource 'attr/thumbIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:2608: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7963:4: Duplicate value for resource 'attr/logoScaleType' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1718: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2454:4: Duplicate value for resource 'attr/alphabeticModifiers' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:94: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1342:4: Duplicate value for resource 'attr/motionDebug' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1885: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1359:4: Duplicate value for resource 'attr/telltales_velocityMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:2484: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8010:4: Duplicate value for resource 'attr/labelVisibilityMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1416: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8056:4: Duplicate value for resource 'attr/menuGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1858: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1369:4: Duplicate value for resource 'attr/clickAction' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:483: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1379:4: Duplicate value for resource 'attr/nestedScrollFlags' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1989: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8220:4: Duplicate value for resource 'attr/cornerFamily' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:723: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8294:4: Duplicate value for resource 'attr/labelBehavior' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:1408: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8359:4: Duplicate value for resource 'attr/animationMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:118: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2661:4: Duplicate value for resource 'attr/thumbTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:2626: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8395:4: Duplicate value for resource 'attr/tabIndicatorGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:2433: .
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8492:4: Duplicate value for resource 'attr/errorIconTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:981: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2747:4: Duplicate value for resource 'attr/buttonGravity' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:332: .
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1500:4: Duplicate value for resource 'attr/autoTransition' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:155: .
+/home/codespace/.gradle/caches/8.10.2/transforms/a7053bb0e899ebbce5d1cb253ceea333/transformed/appcompat-1.6.1/res/values/values.xml:2814:4: Duplicate value for resource 'attr/backgroundTintMode' with config 'DEFAULT' and product ''. Resource was previously defined here: com.xk.netprobe.app-mergeDebugResources-30:/values/values.xml:184: .
+
+> Task :app:processDebugMainManifest
+/workspaces/NetProbe_rebuilt/app/src/main/AndroidManifest.xml:32:9-42 Warning:
+	android:extractNativeLibs should not be specified in this source AndroidManifest.xml file. See https://d.android.com/guide/topics/manifest/application-element#extractNativeLibs for more information.
+The AGP Upgrade Assistant can remove the attribute from the AndroidManifest.xml file and update the build file accordingly. See https://d.android.com/studio/build/agp-upgrade-assistant for more information.
+
+> Task :app:processDebugManifest
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugShaders FROM-CACHE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets FROM-CACHE
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:mergeDebugResources FAILED
+> Task :app:mergeDebugJavaResource
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+   > Resource compilation failed (Failed to compile values resource file /workspaces/NetProbe_rebuilt/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@192dc585) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4470116a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@29080c45) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@67e13959) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1017c9cd) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@54a871e4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3d2b3510) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@53eef81d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7d190a0c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6a29631a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e4e48fa) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2a44773e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1f385110) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3ea8d05e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@42dd56e9) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4b29340b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@16444caf) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6e964419) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@46d42d3c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@44dfd081) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@70cacd81) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2c20f90d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4bfa8c78) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@711b065e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@579b7b39) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7c581856) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@635ed2e9) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4a5e012a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4610f9eb) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7ab6c3d7) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6fea9ff2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@55078474) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1419f09e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@587d31b1) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@63d32043) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@a9e3c69) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5158b0a4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6019e387) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1ab206ff) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@61b40cb4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@757d4db6) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5ad79d45) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@50d8fd1e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@11c88a1d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e47756f) to table.). Check logs for more details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 8s
+19 actionable tasks: 9 executed, 10 from cache
+
+═══ PHASE 5: RESULT ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED — FULL ERROR:
+═══════════════════════════════════════════════════
+
+--- What went wrong ---
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.ResourceCompilerRunnable
+   > Resource compilation failed (Failed to compile values resource file /workspaces/NetProbe_rebuilt/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml. Cause: java.lang.IllegalStateException: Can not add resource (com.android.aaptcompiler.ParsedResource@192dc585) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4470116a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@29080c45) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@67e13959) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1017c9cd) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@54a871e4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3d2b3510) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@53eef81d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7d190a0c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6a29631a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e4e48fa) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2a44773e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1f385110) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@3ea8d05e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@42dd56e9) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4b29340b) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@16444caf) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6e964419) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@46d42d3c) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@44dfd081) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@70cacd81) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@2c20f90d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4bfa8c78) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@711b065e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@579b7b39) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7c581856) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@635ed2e9) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4a5e012a) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@4610f9eb) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@7ab6c3d7) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6fea9ff2) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@55078474) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1419f09e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@587d31b1) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@63d32043) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@a9e3c69) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5158b0a4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@6019e387) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@1ab206ff) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@61b40cb4) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@757d4db6) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@5ad79d45) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@50d8fd1e) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@11c88a1d) to table.,Can not add resource (com.android.aaptcompiler.ParsedResource@e47756f) to table.). Check logs for more details.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 8s
+19 actionable tasks: 9 executed, 10 from cache
+
+--- All Error: lines ---
+FAILURE: Build failed with an exception.
+
+--- Files with errors ---
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1112
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1342
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1359
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1369
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1379
+/home/codespace/.gradle/caches/8.10.2/transforms/10e7b8ba55e9fab3be33b2cf1ba09043/transformed/constraintlayout-2.1.4/res/values/values.xml:1500
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:6945
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:6992
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7059
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7105
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7174
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7370
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7405
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7511
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7525
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7554
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7625
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7687
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7779
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7817
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7894
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:7963
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8010
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8056
+/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values/values.xml:8220
+
+--- Manifest activities ---
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <activity
+        <provider
+        <provider
+        <receiver
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_REPORT.txt
+═══════════════════════════════════════════════════

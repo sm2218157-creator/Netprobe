@@ -1,0 +1,6 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — apktool resources + rebuild
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: فحص apktool_out ═══
+  ❌ /workspaces/v33_recovered/apktool_out/res غير موجود

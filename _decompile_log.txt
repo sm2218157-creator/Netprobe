@@ -1,0 +1,110 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — decompile + reconstruct source
+═══════════════════════════════════════════════════
+
+═══ 1. تحميل jadx ═══
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0  100M    0  7693    0     0  11071      0  2:38:01 --:--:--  2:38:01 11071 33  100M   33 33.4M    0     0  19.8M      0  0:00:05  0:00:01  0:00:04 33.8M 51  100M   51 51.2M    0     0  18.1M      0  0:00:05  0:00:02  0:00:03 24.0M 80  100M   80 80.5M    0     0  21.5M      0  0:00:04  0:00:03  0:00:01 26.5M100  100M  100  100M    0     0  23.4M      0  0:00:04  0:00:04 --:--:-- 27.9M
+  ✅ jadx جاهز
+
+═══ 2. تنظيف مخلفات سابقة ═══
+
+═══ 3. فك APK v3.3 ═══
+INFO  - loading ...
+INFO  - processing ...
+INFO  - progress: 0 of 2653 (0%)INFO  - progress: 360 of 2653 (13%)INFO  - progress: 392 of 2653 (14%)INFO  - progress: 858 of 2653 (32%)INFO  - progress: 859 of 2653 (32%)INFO  - progress: 863 of 2653 (32%)INFO  - progress: 865 of 2653 (32%)INFO  - progress: 867 of 2653 (32%)INFO  - progress: 872 of 2653 (32%)INFO  - progress: 884 of 2653 (33%)INFO  - progress: 903 of 2653 (34%)INFO  - progress: 958 of 2653 (36%)INFO  - progress: 1092 of 2653 (41%)INFO  - progress: 1128 of 2653 (42%)INFO  - progress: 1165 of 2653 (43%)INFO  - progress: 1195 of 2653 (45%)INFO  - progress: 1250 of 2653 (47%)INFO  - progress: 1292 of 2653 (48%)INFO  - progress: 1306 of 2653 (49%)INFO  - progress: 1352 of 2653 (50%)INFO  - progress: 1399 of 2653 (52%)INFO  - progress: 1436 of 2653 (54%)INFO  - progress: 1482 of 2653 (55%)INFO  - progress: 1514 of 2653 (57%)INFO  - progress: 1536 of 2653 (57%)INFO  - progress: 1548 of 2653 (58%)INFO  - progress: 1548 of 2653 (58%)INFO  - progress: 1576 of 2653 (59%)INFO  - progress: 1621 of 2653 (61%)INFO  - progress: 1668 of 2653 (62%)INFO  - progress: 1705 of 2653 (64%)INFO  - progress: 1761 of 2653 (66%)INFO  - progress: 1778 of 2653 (67%)INFO  - progress: 1783 of 2653 (67%)INFO  - progress: 1792 of 2653 (67%)INFO  - progress: 1808 of 2653 (68%)INFO  - progress: 1847 of 2653 (69%)INFO  - progress: 1857 of 2653 (69%)INFO  - progress: 1857 of 2653 (69%)INFO  - progress: 1861 of 2653 (70%)INFO  - progress: 1885 of 2653 (71%)INFO  - progress: 1902 of 2653 (71%)INFO  - progress: 1949 of 2653 (73%)INFO  - progress: 1996 of 2653 (75%)INFO  - progress: 2022 of 2653 (76%)INFO  - progress: 2055 of 2653 (77%)INFO  - progress: 2080 of 2653 (78%)INFO  - progress: 2113 of 2653 (79%)INFO  - progress: 2141 of 2653 (80%)INFO  - progress: 2193 of 2653 (82%)INFO  - progress: 2235 of 2653 (84%)INFO  - progress: 2235 of 2653 (84%)INFO  - progress: 2253 of 2653 (84%)INFO  - progress: 2262 of 2653 (85%)INFO  - progress: 2309 of 2653 (87%)INFO  - progress: 2347 of 2653 (88%)INFO  - progress: 2382 of 2653 (89%)INFO  - progress: 2385 of 2653 (89%)INFO  - progress: 2398 of 2653 (90%)INFO  - progress: 2438 of 2653 (91%)INFO  - progress: 2452 of 2653 (92%)INFO  - progress: 2452 of 2653 (92%)INFO  - progress: 2453 of 2653 (92%)INFO  - progress: 2485 of 2653 (93%)INFO  - progress: 2504 of 2653 (94%)INFO  - progress: 2547 of 2653 (96%)INFO  - progress: 2597 of 2653 (97%)INFO  - progress: 2628 of 2653 (99%)INFO  - progress: 2651 of 2653 (99%)                                                             ERROR - finished with errors, count: 16
+
+  ✅ خرج jadx في /workspaces/v33_recovered/jadx_out
+
+═══ 4. استخراج APK الخام ═══
+
+═══ 5. تفكيك resources.arsc ═══
+  ! apktool غير مثبّت — سنستعمل aapt فقط
+
+═══ 6. جرد المصدر المُستخرج ═══
+
+--- Activities المكتشفة ---
+
+--- عدد ملفات جافا ---
+2952
+
+--- أكبر 20 ملف جافا (الأهم) ---
+1368235	/workspaces/v33_recovered/jadx_out/sources/kotlin/collections/ArraysKt___ArraysKt.java
+679888	/workspaces/v33_recovered/jadx_out/sources/kotlin/collections/unsigned/UArraysKt___UArraysKt.java
+592902	/workspaces/v33_recovered/jadx_out/sources/com/p000xk/netprobe/C0808R.java
+517061	/workspaces/v33_recovered/jadx_out/sources/com/google/android/material/C0488R.java
+329547	/workspaces/v33_recovered/jadx_out/sources/androidx/recyclerview/widget/RecyclerView.java
+214568	/workspaces/v33_recovered/jadx_out/sources/kotlin/collections/CollectionsKt___CollectionsKt.java
+207223	/workspaces/v33_recovered/jadx_out/sources/kotlinx/coroutines/channels/ChannelsKt__DeprecatedKt.java
+198527	/workspaces/v33_recovered/jadx_out/sources/androidx/constraintlayout/widget/C0148R.java
+183789	/workspaces/v33_recovered/jadx_out/sources/kotlin/collections/ArraysKt___ArraysJvmKt.java
+164973	/workspaces/v33_recovered/jadx_out/sources/kotlin/sequences/SequencesKt___SequencesKt.java
+161244	/workspaces/v33_recovered/jadx_out/sources/kotlin/text/StringsKt___StringsKt.java
+154617	/workspaces/v33_recovered/jadx_out/sources/androidx/core/app/NotificationCompat.java
+143669	/workspaces/v33_recovered/jadx_out/sources/androidx/constraintlayout/widget/ConstraintSet.java
+129839	/workspaces/v33_recovered/jadx_out/sources/androidx/appcompat/app/AppCompatDelegateImpl.java
+128813	/workspaces/v33_recovered/jadx_out/sources/androidx/constraintlayout/widget/ConstraintLayout.java
+118648	/workspaces/v33_recovered/jadx_out/sources/androidx/constraintlayout/motion/widget/MotionLayout.java
+116920	/workspaces/v33_recovered/jadx_out/sources/com/google/android/material/textfield/TextInputLayout.java
+114096	/workspaces/v33_recovered/jadx_out/sources/androidx/appcompat/C0024R.java
+112440	/workspaces/v33_recovered/jadx_out/sources/androidx/fragment/app/FragmentManager.java
+112287	/workspaces/v33_recovered/jadx_out/sources/androidx/constraintlayout/solver/widgets/ConstraintWidget.java
+
+--- كل الحزم المكتشفة ---
+android/support/v4/app
+android/support/v4/graphics/drawable
+android/support/v4/os
+androidx/activity
+androidx/activity/contextaware
+androidx/activity/result
+androidx/activity/result/contract
+androidx/annotation
+androidx/annotation/experimental
+androidx/appcompat
+androidx/appcompat/app
+androidx/appcompat/content/res
+androidx/appcompat/graphics/drawable
+androidx/appcompat/resources
+androidx/appcompat/text
+androidx/appcompat/view
+androidx/appcompat/view/menu
+androidx/appcompat/widget
+androidx/arch/core
+androidx/arch/core/executor
+androidx/arch/core/internal
+androidx/arch/core/util
+androidx/cardview
+androidx/cardview/widget
+androidx/collection
+androidx/concurrent/futures
+androidx/constraintlayout/helper/widget
+androidx/constraintlayout/motion/utils
+androidx/constraintlayout/motion/widget
+androidx/constraintlayout/solver
+androidx/constraintlayout/solver/state
+androidx/constraintlayout/solver/state/helpers
+androidx/constraintlayout/solver/widgets
+androidx/constraintlayout/solver/widgets/analyzer
+androidx/constraintlayout/utils/widget
+androidx/constraintlayout/widget
+androidx/coordinatorlayout
+androidx/coordinatorlayout/widget
+androidx/core
+androidx/core/accessibilityservice
+
+═══ 7. نسخ المصدر إلى بنية مشروع ═══
+  ✅ Manifest (jadx)
+  ✅ Java sources
+
+═══════════════════════════════════════════════════
+  ✅ الاسترجاع اكتمل
+  المصدر    : /workspaces/v33_recovered/jadx_out
+  المشروع   : /workspaces/v33_recovered/rebuilt
+  APK خام   : /workspaces/v33_recovered/raw_apk
+═══════════════════════════════════════════════════
+
+الخطوة التالية:
+  ls /workspaces/v33_recovered/jadx_out/sources/com/xk/netprobe/
+  cat /workspaces/v33_recovered/rebuilt/app/src/main/AndroidManifest.xml | head -40

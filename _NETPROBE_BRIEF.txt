@@ -1,0 +1,912 @@
+========== BUILD RESULT ==========
+BUILD SUCCESSFUL in 38s
+BUILD SUCCESSFUL in 38s
+
+--- apk ---
+total 5356
+drwxrwxrwx+ 2 codespace codespace    4096 Oct 14 15:51 .
+drwxrwxrwx+ 3 codespace codespace    4096 Oct 14 15:51 ..
+-rw-rw-rw-  1 codespace codespace 5470531 Oct 14 15:51 app-debug.apk
+-rw-rw-rw-  1 codespace codespace     365 Oct 14 15:51 output-metadata.json
+
+========== ERRORS (top 40) ==========
+
+========== TREE ==========
+./README.md
+./app/build.gradle
+./app/src/main/AndroidManifest.xml
+./app/src/main/java/com/xk/netprobe/MainActivity.java
+./app/src/main/java/com/xk/netprobe/NmapRunner.java
+./app/src/main/java/com/xk/netprobe/PrivilegeManager.java
+./app/src/main/java/com/xk/netprobe/TerminalActivity.java
+./app/src/main/java/com/xk/netprobe/WifiScannerActivity.java
+./app/src/main/res/drawable/ic_launcher.xml
+./app/src/main/res/layout/activity_main.xml
+./app/src/main/res/layout/activity_terminal.xml
+./app/src/main/res/layout/activity_wifi.xml
+./app/src/main/res/layout/item_wifi.xml
+./app/src/main/res/values/colors.xml
+./app/src/main/res/values/strings.xml
+./app/src/main/res/values/themes.xml
+./app/src/main/res/xml/file_paths.xml
+./brief.sh
+./build.gradle
+./dump_netprobe.sh
+./fix_and_report.sh
+./gradle.properties
+./gradle/wrapper/gradle-wrapper.properties
+./gradlew
+./gradlew.bat
+./init_dirs.sh
+./local.properties
+./settings.gradle
+
+========== GRADLE FILES ==========
+--- settings.gradle ---
+pluginManagement { repositories { google(); mavenCentral(); gradlePluginPortal() } }
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories { google(); mavenCentral() }
+}
+rootProject.name = "NetProbe"
+include ':app'
+
+--- build.gradle ---
+plugins { id 'com.android.application' version '8.2.0' apply false }
+
+--- gradle.properties ---
+org.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8 -XX:+UseParallelGC
+android.useAndroidX=true
+android.nonTransitiveRClass=true
+android.enableJetifier=true
+org.gradle.parallel=true
+org.gradle.caching=true
+org.gradle.java.home=/usr/lib/jvm/java-17-openjdk-amd64
+
+--- app/build.gradle ---
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.xk.netprobe'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.xk.netprobe"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes { release { minifyEnabled false } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    packaging {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES','META-INF/LICENSE','META-INF/NOTICE','META-INF/*.kotlin_module']
+        }
+        jniLibs { useLegacyPackaging = true }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.drawerlayout:drawerlayout:1.2.0'
+    implementation 'com.google.android.material:material:1.11.0'
+}
+
+
+========== MANIFEST ==========
+--- ./app/src/main/AndroidManifest.xml ---
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:extractNativeLibs="true"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TerminalActivity" android:exported="false" />
+        <activity android:name=".WifiScannerActivity" android:exported="false" />
+    </application>
+</manifest>
+
+
+========== SOURCE FILES ==========
+3537	app/src/main/java/com/xk/netprobe/MainActivity.java
+5541	app/src/main/java/com/xk/netprobe/NmapRunner.java
+2290	app/src/main/java/com/xk/netprobe/PrivilegeManager.java
+5033	app/src/main/java/com/xk/netprobe/TerminalActivity.java
+3783	app/src/main/java/com/xk/netprobe/WifiScannerActivity.java
+
+========== SOURCE CONTENTS ==========
+--- app/src/main/java/com/xk/netprobe/MainActivity.java (3537B) ---
+package com.xk.netprobe;
+
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    private static final int REQ_LOCATION = 1001;
+
+    private EditText etTarget, etExtra;
+    private TextView tvStatus, tvShizuku;
+    private Button btnStart, btnWifi;
+
+    @Override
+    protected void onCreate(Bundle s) {
+        super.onCreate(s);
+        setContentView(R.layout.activity_main);
+
+        etTarget = findViewById(R.id.etTarget);
+        etExtra = findViewById(R.id.etExtraArgs);
+        tvStatus = findViewById(R.id.tvStatus);
+        tvShizuku = findViewById(R.id.tvShizukuStatus);
+        btnStart = findViewById(R.id.btnStart);
+        btnWifi = findViewById(R.id.btnWifi);
+
+        requestLocationIfNeeded();
+
+        PrivilegeManager.Level lvl = PrivilegeManager.detect(this);
+        tvShizuku.setText("Privileges: " + PrivilegeManager.describe(lvl));
+
+        wireShortcut(R.id.chipSn, "-sn");
+        wireShortcut(R.id.chipSv, "-sV");
+        wireShortcut(R.id.chipSt, "-sT");
+        wireShortcut(R.id.chipA, "-A");
+        wireShortcut(R.id.chipPn, "-Pn");
+        wireShortcut(R.id.chipF, "-F");
+        wireShortcut(R.id.chipP, "-p-");
+        wireShortcut(R.id.chipTop100, "--top-ports 100");
+        wireShortcut(R.id.chipT4, "-T4");
+        wireShortcut(R.id.chipSC, "-sC");
+
+        btnStart.setOnClickListener(v -> {
+            String target = etTarget.getText().toString().trim();
+            if (target.isEmpty()) {
+                Toast.makeText(this, "أدخل IP أو نطاق", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            String extra = etExtra.getText().toString().trim();
+            Intent i = new Intent(this, TerminalActivity.class);
+            i.putExtra("target", target);
+            i.putExtra("extra", extra);
+            startActivity(i);
+        });
+
+        btnWifi.setOnClickListener(v -> {
+            if (!hasLocationPerm()) {
+                requestLocationIfNeeded();
+                Toast.makeText(this, "امنح صلاحية الموقع أولاً", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(new Intent(this, WifiScannerActivity.class));
+        });
+    }
+
+    private void wireShortcut(int id, String cmd) {
+        try {
+            Button b = findViewById(id);
+            if (b == null) return;
+            b.setOnClickListener(v -> {
+                String cur = etExtra.getText().toString();
+                etExtra.setText(cur.isEmpty() ? cmd : cur + " " + cmd);
+                etExtra.setSelection(etExtra.getText().length());
+            });
+        } catch (Exception ignored) {}
+    }
+
+    private boolean hasLocationPerm() {
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED;
+    }
+
+    private void requestLocationIfNeeded() {
+        if (!hasLocationPerm()) {
+            ActivityCompat.requestPermissions(this,
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION,
+                             Manifest.permission.ACCESS_COARSE_LOCATION},
+                REQ_LOCATION);
+        }
+    }
+}
+
+--- app/src/main/java/com/xk/netprobe/NmapRunner.java (5541B) ---
+package com.xk.netprobe;
+
+import android.content.Context;
+import android.util.Log;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
+public class NmapRunner {
+
+    public interface Listener {
+        void onLine(String line);
+        void onExit(int code);
+        void onError(String message);
+    }
+
+    private final Context ctx;
+    private final PrivilegeManager.Level level;
+    private Process process;
+    private volatile boolean cancelled = false;
+
+    public NmapRunner(Context ctx, PrivilegeManager.Level level) {
+        this.ctx = ctx;
+        this.level = level;
+    }
+
+    public void cancel() {
+        cancelled = true;
+        if (process != null) {
+            try { process.destroy(); } catch (Exception ignored) {}
+            process = null;
+        }
+    }
+
+    public File ensureBinary() throws Exception {
+        File out = new File(ctx.getFilesDir(), "nmap");
+        if (out.exists() && out.length() > 0) {
+            try { out.setExecutable(true, false); } catch (Exception ignored) {}
+            return out;
+        }
+        try (InputStream in = ctx.getAssets().open("nmap");
+             OutputStream os = new FileOutputStream(out)) {
+            byte[] buf = new byte[65536];
+            int n;
+            while ((n = in.read(buf)) > 0) os.write(buf, 0, n);
+        }
+        out.setExecutable(true, false);
+        try {
+            Runtime.getRuntime().exec(new String[]{
+                "chmod", "755", out.getAbsolutePath()
+            }).waitFor();
+        } catch (Exception ignored) {}
+        return out;
+    }
+
+    public void run(File nmapBin, List<String> userArgs, Listener listener) {
+        new Thread(() -> {
+            try {
+                List<String> args = adaptForPrivileges(userArgs);
+                if (level == PrivilegeManager.Level.ROOT) {
+                    runAsRoot(nmapBin, args, listener);
+                } else {
+                    runDirect(nmapBin, args, listener);
+                }
+            } catch (Exception e) {
+                Log.e("NmapRunner", "error", e);
+                listener.onError("Runner error: " + e.getMessage());
+            }
+        }).start();
+    }
+
+    private List<String> adaptForPrivileges(List<String> userArgs) {
+        List<String> out = new ArrayList<>(userArgs);
+        switch (level) {
+            case APP:
+                for (int i = out.size() - 1; i >= 0; i--) {
+                    String a = out.get(i);
+                    if (a.equals("-sS") || a.equals("-O") || a.equals("-sU")) {
+                        out.remove(i);
+                    }
+                }
+                if (!out.contains("--unprivileged")) out.add("--unprivileged");
+                break;
+            case SHELL:
+                if (!out.contains("--unprivileged")) out.add("--unprivileged");
+                for (int i = out.size() - 1; i >= 0; i--) {
+                    String a = out.get(i);
+                    if (a.equals("-sS") || a.equals("-O")) out.remove(i);
+                }
+                break;
+            case ROOT:
+                break;
+        }
+        if (!out.contains("-Pn")) out.add(0, "-Pn");
+        if (!hasAnyT(out)) out.add("-T4");
+        return out;
+    }
+
+    private boolean hasAnyT(List<String> args) {
+        for (String a : args) if (a.startsWith("-T")) return true;
+        return false;
+    }
+
+    private void runDirect(File nmapBin, List<String> args, Listener listener)
+            throws Exception {
+        List<String> cmd = new ArrayList<>();
+        cmd.add(nmapBin.getAbsolutePath());
+        cmd.addAll(args);
+        ProcessBuilder pb = new ProcessBuilder(cmd);
+        pb.redirectErrorStream(true);
+        pb.environment().put("PATH", ctx.getFilesDir().getAbsolutePath()
+                + ":/system/bin:/system/xbin");
+        pb.directory(ctx.getFilesDir());
+        process = pb.start();
+        stream(process, listener);
+    }
+
+    private void runAsRoot(File nmapBin, List<String> args, Listener listener)
+            throws Exception {
+        StringBuilder cmd = new StringBuilder();
+        cmd.append(nmapBin.getAbsolutePath());
+        for (String a : args) cmd.append(' ').append(shellEscape(a));
+        process = PrivilegeManager.execAsRoot(cmd.toString());
+        stream(process, listener);
+    }
+
+    private void stream(Process p, Listener listener) {
+        try {
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (cancelled) break;
+                listener.onLine(line);
+            }
+            int code = p.waitFor();
+            listener.onExit(code);
+        } catch (Exception e) {
+            listener.onError("stream error: " + e.getMessage());
+        }
+    }
+
+    private String shellEscape(String s) {
+        if (s.matches("[a-zA-Z0-9_/.:=-]+")) return s;
+        return "'" + s.replace("'", "'\\''") + "'";
+    }
+
+    public static List<String> buildArgs(String target, String extra) {
+        List<String> out = new ArrayList<>();
+        if (extra != null && !extra.trim().isEmpty()) {
+            for (String tok : extra.trim().split("\\s+")) {
+                if (!tok.isEmpty()) out.add(tok);
+            }
+        }
+        if (target != null && !target.trim().isEmpty()) out.add(target.trim());
+        return out;
+    }
+}
+
+--- app/src/main/java/com/xk/netprobe/PrivilegeManager.java (2290B) ---
+package com.xk.netprobe;
+
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.util.Log;
+
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+
+public class PrivilegeManager {
+
+    public enum Level { APP, SHELL, ROOT }
+
+    private static final String TAG = "PrivilegeManager";
+
+    public static boolean testRealRoot() {
+        Process p = null;
+        try {
+            p = Runtime.getRuntime().exec("su");
+            DataOutputStream os = new DataOutputStream(p.getOutputStream());
+            BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
+            os.writeBytes("id\n");
+            os.writeBytes("exit\n");
+            os.flush();
+            String line = br.readLine();
+            if (line != null && line.contains("uid=0")) return true;
+            p.waitFor();
+        } catch (Exception e) {
+            Log.d(TAG, "no su: " + e.getMessage());
+        } finally {
+            if (p != null) p.destroy();
+        }
+        return false;
+    }
+
+    public static boolean hasShizuku(Context ctx) {
+        try {
+            ctx.getPackageManager().getPackageInfo("moe.shizuku.privileged.api", 0);
+            if (Build.VERSION.SDK_INT >= 23) {
+                return ctx.checkSelfPermission("moe.shizuku.manager.permission.API_V23")
+                        == PackageManager.PERMISSION_GRANTED;
+            }
+        } catch (Exception ignored) {}
+        return false;
+    }
+
+    public static Level detect(Context ctx) {
+        if (testRealRoot()) return Level.ROOT;
+        if (hasShizuku(ctx)) return Level.SHELL;
+        return Level.APP;
+    }
+
+    public static String describe(Level l) {
+        switch (l) {
+            case ROOT:  return "ROOT — full scans available";
+            case SHELL: return "SHELL (Shizuku) — most scans";
+            default:    return "APP — TCP connect scans";
+        }
+    }
+
+    public static Process execAsRoot(String cmd) throws Exception {
+        Process p = Runtime.getRuntime().exec("su");
+        DataOutputStream os = new DataOutputStream(p.getOutputStream());
+        os.writeBytes(cmd + "\n");
+        os.writeBytes("exit\n");
+        os.flush();
+        return p;
+    }
+}
+
+--- app/src/main/java/com/xk/netprobe/TerminalActivity.java (5033B) ---
+package com.xk.netprobe;
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+public class TerminalActivity extends AppCompatActivity {
+
+    private TextView tvCommand, tvOutput;
+    private ScrollView scrollOutput;
+    private ProgressBar progressBar;
+    private NmapRunner runner;
+    private final Handler ui = new Handler(Looper.getMainLooper());
+    private StringBuilder buffer = new StringBuilder();
+    private String commandShown = "";
+
+    @Override
+    protected void onCreate(Bundle s) {
+        super.onCreate(s);
+        setContentView(R.layout.activity_terminal);
+
+        tvCommand = findViewById(R.id.tvCommand);
+        tvOutput = findViewById(R.id.tvOutput);
+        scrollOutput = findViewById(R.id.scrollOutput);
+        progressBar = findViewById(R.id.progressBar);
+
+        Button btnStop = findViewById(R.id.btnStop);
+        Button btnClear = findViewById(R.id.btnClear);
+        Button btnSave = findViewById(R.id.btnSave);
+
+        PrivilegeManager.Level level = PrivilegeManager.detect(this);
+        appendLine("[*] privilege: " + PrivilegeManager.describe(level));
+
+        String target = getIntent().getStringExtra("target");
+        String extra = getIntent().getStringExtra("extra");
+
+        List<String> args = NmapRunner.buildArgs(target, extra);
+        commandShown = "nmap " + joinArgs(args);
+        tvCommand.setText("$ " + commandShown);
+
+        btnStop.setOnClickListener(v -> {
+            if (runner != null) runner.cancel();
+            appendLine("[!] cancelled");
+            progressBar.setVisibility(ProgressBar.GONE);
+        });
+        btnClear.setOnClickListener(v -> { buffer.setLength(0); tvOutput.setText(""); });
+        btnSave.setOnClickListener(v -> saveOutput());
+
+        runner = new NmapRunner(this, level);
+        progressBar.setVisibility(ProgressBar.VISIBLE);
+
+        new Thread(() -> {
+            try {
+                File bin = runner.ensureBinary();
+                ui.post(() -> appendLine("[*] binary: " + bin.getAbsolutePath()));
+                runner.run(bin, args, new NmapRunner.Listener() {
+                    @Override public void onLine(String line) {
+                        ui.post(() -> appendLine(line));
+                    }
+                    @Override public void onExit(int code) {
+                        ui.post(() -> {
+                            appendLine("");
+                            appendLine("[*] exit code " + code);
+                            progressBar.setVisibility(ProgressBar.GONE);
+                        });
+                    }
+                    @Override public void onError(String message) {
+                        ui.post(() -> {
+                            appendLine("[!] " + message);
+                            progressBar.setVisibility(ProgressBar.GONE);
+                        });
+                    }
+                });
+            } catch (Exception e) {
+                ui.post(() -> {
+                    appendLine("[!] nmap binary missing");
+                    appendLine("[!] ضع nmap في app/src/main/assets/nmap");
+                    appendLine("[!] أو: Termux → pkg install nmap");
+                    progressBar.setVisibility(ProgressBar.GONE);
+                });
+            }
+        }).start();
+    }
+
+    private void appendLine(String line) {
+        buffer.append(line).append('\n');
+        tvOutput.setText(buffer.toString());
+        scrollOutput.post(() -> scrollOutput.fullScroll(ScrollView.FOCUS_DOWN));
+    }
+
+    private void saveOutput() {
+        try {
+            File dir = new File(getFilesDir(), "reports");
+            if (!dir.exists() && !dir.mkdirs()) throw new RuntimeException("mkdir");
+            String ts = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.US).format(new Date());
+            File f = new File(dir, "nmap_" + ts + ".txt");
+            try (FileOutputStream fos = new FileOutputStream(f)) {
+                fos.write(("$ " + commandShown + "\n\n" + buffer.toString()).getBytes("UTF-8"));
+            }
+            Toast.makeText(this, "حُفظ: " + f.getName(), Toast.LENGTH_LONG).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "فشل: " + e.getMessage(), Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private static String joinArgs(List<String> args) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < args.size(); i++) {
+            if (i > 0) sb.append(' ');
+            sb.append(args.get(i));
+        }
+        return sb.toString();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (runner != null) runner.cancel();
+    }
+}
+
+--- app/src/main/java/com/xk/netprobe/WifiScannerActivity.java (3783B) ---
+package com.xk.netprobe;
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.wifi.ScanResult;
+import android.net.wifi.WifiManager;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class WifiScannerActivity extends AppCompatActivity {
+
+    private WifiManager wifi;
+    private TextView tvStatus;
+    private WifiAdapter adapter;
+    private BroadcastReceiver receiver;
+
+    @Override
+    protected void onCreate(Bundle s) {
+        super.onCreate(s);
+        setContentView(R.layout.activity_wifi);
+
+        wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+        RecyclerView recycler = findViewById(R.id.recyclerWifi);
+        tvStatus = findViewById(R.id.tvWifiStatus);
+        Button btn = findViewById(R.id.btnScanWifi);
+
+        adapter = new WifiAdapter();
+        recycler.setLayoutManager(new LinearLayoutManager(this));
+        recycler.setAdapter(adapter);
+
+        receiver = new BroadcastReceiver() {
+            @Override public void onReceive(Context c, Intent i) { showResults(); }
+        };
+
+        btn.setOnClickListener(v -> {
+            try {
+                registerReceiver(receiver, new IntentFilter(WifiManager.SCAN_RESULTS_AVAILABLE_ACTION));
+                boolean started = wifi.startScan();
+                tvStatus.setText(started ? "جاري الفحص..." : "فشل بدء الفحص");
+            } catch (Exception e) {
+                Toast.makeText(this, "خطأ: " + e.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    private void showResults() {
+        try {
+            List<ScanResult> list = wifi.getScanResults();
+            if (list == null) list = new ArrayList<>();
+            adapter.setItems(list);
+            tvStatus.setText("عدد الشبكات: " + list.size());
+        } catch (Exception e) {
+            tvStatus.setText("خطأ: " + e.getMessage());
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        try { unregisterReceiver(receiver); } catch (Exception ignored) {}
+    }
+
+    static class WifiAdapter extends RecyclerView.Adapter<WifiAdapter.VH> {
+        private final List<ScanResult> items = new ArrayList<>();
+        void setItems(List<ScanResult> l) { items.clear(); items.addAll(l); notifyDataSetChanged(); }
+        @NonNull @Override public VH onCreateViewHolder(@NonNull ViewGroup p, int t) {
+            return new VH(LayoutInflater.from(p.getContext()).inflate(R.layout.item_wifi, p, false));
+        }
+        @Override public void onBindViewHolder(@NonNull VH h, int i) {
+            ScanResult r = items.get(i);
+            h.ssid.setText(r.SSID == null || r.SSID.isEmpty() ? "(hidden)" : r.SSID);
+            h.bssid.setText(r.BSSID);
+            h.info.setText("Signal: " + r.level + " dBm  |  " + r.frequency + " MHz");
+        }
+        @Override public int getItemCount() { return items.size(); }
+        static class VH extends RecyclerView.ViewHolder {
+            TextView ssid, bssid, info;
+            VH(@NonNull View v) {
+                super(v);
+                ssid = v.findViewById(R.id.tvWifiSsid);
+                bssid = v.findViewById(R.id.tvWifiBssid);
+                info = v.findViewById(R.id.tvWifiInfo);
+            }
+        }
+    }
+}
+
+
+========== LAYOUT/RES KEUXML ==========
+--- app/src/main/res/layout/activity_main.xml (7059B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/title_main" android:textColor="@color/primary"
+            android:textSize="20sp" android:textStyle="bold" android:gravity="center"
+            android:paddingBottom="16dp"/>
+        <TextView android:id="@+id/tvShizukuStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Privileges: detecting..."
+            android:textColor="@color/text" android:textSize="13sp"
+            android:padding="10dp" android:background="@color/surface"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="الهدف:" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="12dp" android:paddingBottom="6dp"/>
+        <EditText android:id="@+id/etTarget"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/hint_target" android:inputType="textUri"
+            android:padding="14dp" android:background="@color/surface"
+            android:textColor="@color/text" android:textColorHint="@color/text_secondary"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="أوامر إضافية:" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="12dp" android:paddingBottom="6dp"/>
+        <EditText android:id="@+id/etExtraArgs"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/hint_extra_args" android:inputType="text"
+            android:padding="14dp" android:background="@color/surface"
+            android:textColor="@color/text" android:textColorHint="@color/text_secondary"
+            android:fontFamily="monospace"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/label_shortcuts" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="16dp" android:paddingBottom="8dp"/>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+  
+...[trunc]...
+
+--- app/src/main/res/layout/activity_terminal.xml (2642B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#000000">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:background="#1A1A1A">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="@string/terminal_title"
+            android:textColor="#00FF00" android:fontFamily="monospace"
+            android:textSize="13sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnStop" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_stop"
+            android:textSize="11sp" android:backgroundTint="#F85149"
+            android:minWidth="0dp" android:layout_marginEnd="4dp"/>
+        <Button android:id="@+id/btnClear" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_clear"
+            android:textSize="11sp" android:backgroundTint="#30363D"
+            android:minWidth="0dp" android:layout_marginEnd="4dp"/>
+        <Button android:id="@+id/btnSave" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_save"
+            android:textSize="11sp" android:backgroundTint="#30363D" android:minWidth="0dp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvCommand"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="8dp" android:background="#0A0A0A"
+        android:textColor="#00E5FF" android:fontFamily="monospace" android:textSize="11sp"/>
+    <ScrollView android:id="@+id/scrollOutput"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:background="#000000">
+        <TextView android:id="@+id/tvOutput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="8dp" android:textColor="#00FF00"
+            android:fontFamily="monospace" android:textSize="10sp"/>
+    </ScrollView>
+    <ProgressBar android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:indeterminate="true" android:visibility="gone"/>
+</LinearLayout>
+
+--- app/src/main/res/layout/activity_wifi.xml (1313B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg" android:padding="12dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/wifi_title" android:textColor="@color/primary"
+        android:textSize="20sp" android:textStyle="bold" android:gravity="center"
+        android:paddingBottom="12dp"/>
+    <Button android:id="@+id/btnScanWifi"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/wifi_scan" android:backgroundTint="@color/primary"
+        android:textColor="@color/bg"/>
+    <TextView android:id="@+id/tvWifiStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingTop="12dp" android:textColor="@color/text_secondary"
+        android:textSize="13sp" android:text="اضغط للبدء"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerWifi"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginTop="12dp"/>
+</LinearLayout>
+
+--- app/src/main/res/layout/item_wifi.xml (1330B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    app:cardBackgroundColor="@color/surface" app:cardCornerRadius="6dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="12dp">
+        <TextView android:id="@+id/tvWifiSsid"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/primary" android:textSize="14sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvWifiBssid"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text_secondary" android:textSize="11sp"
+            android:fontFamily="monospace" android:paddingTop="2dp"/>
+        <TextView android:id="@+id/tvWifiInfo"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="@color/text" android:textSize="11sp" android:paddingTop="4dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+--- app/src/main/res/values/colors.xml (392B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0D1117</color>
+    <color name="surface">#161B22</color>
+    <color name="primary">#58A6FF</color>
+    <color name="accent">#F78166</color>
+    <color name="text">#C9D1D9</color>
+    <color name="text_secondary">#8B949E</color>
+    <color name="green">#3FB950</color>
+    <color name="red">#F85149</color>
+</resources>
+
+--- app/src/main/res/values/strings.xml (953B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NetProbe</string>
+    <string name="title_main">NetProbe — Nmap Scanner</string>
+    <string name="hint_target">192.168.1.1 أو example.com</string>
+    <string name="hint_extra_args">أوامر إضافية (اختياري)</string>
+    <string name="btn_start">ابدأ الفحص</string>
+    <string name="btn_wifi">ماسح WiFi</string>
+    <string name="btn_shizuku">طلب Shizuku</string>
+    <string name="label_shortcuts">اختصارات Nmap:</string>
+    <string name="status_ready">جاهز — أدخل الهدف</string>
+    <string name="terminal_title">طرفية Nmap</string>
+    <string name="btn_stop">إيقاف</string>
+    <string name="btn_clear">مسح</string>
+    <string name="btn_save">حفظ</string>
+    <string name="wifi_title">ماسح الشبكات</string>
+    <string name="wifi_scan">فحص الشبكات</string>
+</resources>
+
+--- app/src/main/res/values/themes.xml (473B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+</resources>
+
+--- app/src/main/res/xml/file_paths.xml (106B) ---
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <files-path name="reports" path="reports/" />
+</paths>
+
+
+========== SIZE ==========
+910 _NETPROBE_BRIEF.txt
+36K	_NETPROBE_BRIEF.txt

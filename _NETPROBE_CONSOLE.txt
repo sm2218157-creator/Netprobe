@@ -1,0 +1,356 @@
+
+============================================================
+## 1. ENVIRONMENT
+============================================================
+
+### OS / arch
+------------------------------------------------------------
+$ uname -a
+Linux codespaces-d735f3 6.8.0-1064-azure #72~22.04.1-Ubuntu SMP Wed Jul 22 23:39:45 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+
+### JAVA_HOME (before)
+------------------------------------------------------------
+JAVA_HOME=/usr/local/sdkman/candidates/java/current
+PATH contains java: /home/codespace/java/current/bin/java
+
+### java -version
+------------------------------------------------------------
+$ java -version
+openjdk version "25.0.4.1" 2026-08-18 LTS
+OpenJDK Runtime Environment Microsoft-14951822 (build 25.0.4.1+1-LTS)
+OpenJDK 64-Bit Server VM Microsoft-14951822 (build 25.0.4.1+1-LTS, mixed mode, sharing)
+
+### Available JDKs
+------------------------------------------------------------
+$ ls -la /usr/lib/jvm
+total 24
+drwxr-xr-x 4 root root 4096 Oct 13 08:12 .
+drwxr-xr-x 1 root root 4096 Oct 13 08:12 ..
+-rw-r--r-- 1 root root 1773 Aug 27 18:42 .java-1.17.0-openjdk-amd64.jinfo
+lrwxrwxrwx 1 root root   21 Aug 27 18:42 java-1.17.0-openjdk-amd64 -> java-17-openjdk-amd64
+drwxr-xr-x 9 root root 4096 Oct 13 08:12 java-17-openjdk-amd64
+drwxr-xr-x 2 root root 4096 Oct 13 08:12 openjdk-17
+$ update-alternatives --list java
+/usr/lib/jvm/java-17-openjdk-amd64/bin/java
+
+### Gradle wrapper properties
+------------------------------------------------------------
+$ cat gradle/wrapper/gradle-wrapper.properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.10.2-bin.zip
+networkTimeout=10000
+retries=0
+retryBackOffMs=500
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+
+### gradlew present?
+------------------------------------------------------------
+$ ls -la gradlew gradlew.bat
+-rwxrwxrwx 1 codespace codespace 8656 Oct 13 14:06 gradlew
+-rw-rw-rw- 1 codespace codespace 2848 Oct 13 14:06 gradlew.bat
+
+### git state
+------------------------------------------------------------
+$ git branch --show-current
+main
+$ git log --oneline -20
+1e57a47 Initial commit
+$ git status --short
+?? .gradle/
+?? NetProbe-v1.0.apk
+?? NetProbe-v1.0.zip
+?? NetProbe-v1.1.apk
+?? NetProbe-v1.1.zip
+?? NetProbe-v1.2.apk
+?? NetProbe-v1.2.zip
+?? NetProbe-v1.3.apk
+?? NetProbe-v1.3.zip
+?? NetProbe-v1.4.apk
+?? NetProbe-v1.4.zip
+?? NetProbe-v1.7.apk
+?? NetProbe-v1.7.zip
+?? NetProbe-v1.8.apk
+?? NetProbe-v1.8.zip
+?? NetProbe-v1.9.apk
+?? NetProbe-v1.9.zip
+?? NetProbe-v3.0.apk
+?? NetProbe-v3.0.zip
+?? NetProbe-v3.1.apk
+?? NetProbe-v3.1.zip
+?? NetProbe-v3.3.apk
+?? NetProbe-v3.3.zip
+?? _ALPHA_CONSOLE.txt
+?? _ALPHA_REPORT.txt
+?? _NETPROBE_CONSOLE.txt
+?? _NETPROBE_DUMP.txt
+?? _build_full.txt
+?? _gitlog.txt
+?? _gitstatus.txt
+?? _tree.txt
+?? app/
+?? build.gradle
+?? dump_netprobe.sh
+?? fix_and_report.sh
+?? gradle.properties
+?? gradle.properties.bak.1791992639
+?? gradle/
+?? gradlew
+?? gradlew.bat
+?? init_dirs.sh
+?? local.properties
+?? settings.gradle
+$ git remote -v
+origin	https://github.com/sm2218157-creator/Netprobe (fetch)
+origin	https://github.com/sm2218157-creator/Netprobe (push)
+
+============================================================
+## 2. FIX APPLIED
+============================================================
+
+### Chosen JAVA_HOME
+------------------------------------------------------------
+/usr/lib/jvm/java-17-openjdk-amd64
+
+### java -version (after fix)
+------------------------------------------------------------
+$ /usr/lib/jvm/java-17-openjdk-amd64/bin/java -version
+openjdk version "17.0.20.1" 2026-08-18
+OpenJDK Runtime Environment (build 17.0.20.1+1-1-24.04-Ubuntu)
+OpenJDK 64-Bit Server VM (build 17.0.20.1+1-1-24.04-Ubuntu, mixed mode, sharing)
+
+### Upgrade Gradle wrapper -> 8.10.2
+------------------------------------------------------------
+$ cat gradle/wrapper/gradle-wrapper.properties
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.10.2-bin.zip
+networkTimeout=10000
+retries=0
+retryBackOffMs=500
+validateDistributionUrl=true
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+
+### gradle.properties
+------------------------------------------------------------
+$ cat gradle.properties
+org.gradle.jvmargs=-Xmx3g -Dfile.encoding=UTF-8 -XX:+UseParallelGC
+android.useAndroidX=true
+android.nonTransitiveRClass=true
+android.enableJetifier=true
+org.gradle.parallel=true
+org.gradle.caching=true
+org.gradle.java.home=/usr/lib/jvm/java-17-openjdk-amd64
+
+============================================================
+## 3. CLEAN
+============================================================
+Stopping Daemon(s)
+1 Daemon stopped
+$ rm -rf .gradle build app/build
+$ rm -rf /home/codespace/.gradle/caches/8.2 /home/codespace/.gradle/caches/8.0 /home/codespace/.gradle/caches/8.1
+$ rm -rf /home/codespace/.gradle/caches/transforms-3 /home/codespace/.gradle/caches/transforms-4
+$ rm -rf /home/codespace/.gradle/daemon
+done
+
+============================================================
+## 4. BUILD (assembleDebug --stacktrace)
+============================================================
+
+### Exit code
+------------------------------------------------------------
+0
+
+### Build result
+------------------------------------------------------------
+BUILD SUCCESSFUL in 38s
+
+### APK outputs
+------------------------------------------------------------
+$ ls -la app/build/outputs/apk/debug/
+total 5356
+drwxrwxrwx+ 2 codespace codespace    4096 Oct 14 15:51 .
+drwxrwxrwx+ 3 codespace codespace    4096 Oct 14 15:51 ..
+-rw-rw-rw-  1 codespace codespace 5470531 Oct 14 15:51 app-debug.apk
+-rw-rw-rw-  1 codespace codespace     365 Oct 14 15:51 output-metadata.json
+$ ls -la app/build/outputs/apk/
+total 12
+drwxrwxrwx+ 3 codespace codespace 4096 Oct 14 15:51 .
+drwxrwxrwx+ 4 codespace codespace 4096 Oct 14 15:51 ..
+drwxrwxrwx+ 2 codespace codespace 4096 Oct 14 15:51 debug
+
+### Tail 150 lines of build log
+------------------------------------------------------------
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with JetifyTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with ExtractAarTransform
+Transforming core-1.9.0.aar (androidx.core:core:1.9.0) with AarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with JetifyTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with JetifyTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with JetifyTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with JetifyTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+Transforming profileinstaller-1.3.0.aar (androidx.profileinstaller:profileinstaller:1.3.0) with JetifyTransform
+Transforming profileinstaller-1.3.0.aar (androidx.profileinstaller:profileinstaller:1.3.0) with ExtractAarTransform
+Transforming profileinstaller-1.3.0.aar (androidx.profileinstaller:profileinstaller:1.3.0) with AarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with JetifyTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with JetifyTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with JetifyTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with JetifyTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with JetifyTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with JetifyTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with JetifyTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with ExtractAarTransform
+Transforming documentfile-1.0.0.aar (androidx.documentfile:documentfile:1.0.0) with AarTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with JetifyTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with ExtractAarTransform
+Transforming localbroadcastmanager-1.0.0.aar (androidx.localbroadcastmanager:localbroadcastmanager:1.0.0) with AarTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with JetifyTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with ExtractAarTransform
+Transforming print-1.0.0.aar (androidx.print:print:1.0.0) with AarTransform
+Transforming annotation-1.3.0.jar (androidx.annotation:annotation:1.3.0) with JetifyTransform
+Transforming annotation-1.3.0.jar (androidx.annotation:annotation:1.3.0) with IdentityTransform
+Transforming annotation-experimental-1.3.0.aar (androidx.annotation:annotation-experimental:1.3.0) with JetifyTransform
+Transforming annotation-experimental-1.3.0.aar (androidx.annotation:annotation-experimental:1.3.0) with ExtractAarTransform
+Transforming annotation-experimental-1.3.0.aar (androidx.annotation:annotation-experimental:1.3.0) with AarTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with JetifyTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with JetifyTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with IdentityTransform
+Transforming kotlin-stdlib-jdk8-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22) with JetifyTransform
+Transforming kotlin-stdlib-jdk8-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22) with IdentityTransform
+Transforming kotlin-stdlib-jdk7-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22) with JetifyTransform
+Transforming kotlin-stdlib-jdk7-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.22) with IdentityTransform
+Transforming kotlin-stdlib-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib:1.8.22) with JetifyTransform
+Transforming kotlin-stdlib-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib:1.8.22) with IdentityTransform
+Transforming error_prone_annotations-2.15.0.jar (com.google.errorprone:error_prone_annotations:2.15.0) with JetifyTransform
+Transforming error_prone_annotations-2.15.0.jar (com.google.errorprone:error_prone_annotations:2.15.0) with IdentityTransform
+Transforming kotlin-stdlib-common-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22) with JetifyTransform
+Transforming kotlin-stdlib-common-1.8.22.jar (org.jetbrains.kotlin:kotlin-stdlib-common:1.8.22) with IdentityTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with JetifyTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with IdentityTransform
+Transforming constraintlayout-solver-2.0.1.jar (androidx.constraintlayout:constraintlayout-solver:2.0.1) with JetifyTransform
+Transforming constraintlayout-solver-2.0.1.jar (androidx.constraintlayout:constraintlayout-solver:2.0.1) with IdentityTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with JetifyTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Caching has been disabled for the task
+Task ':app:mergeDebugJavaResource' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJavaResource'.
+
+> Task :app:validateSigningDebug
+Caching disabled for task ':app:validateSigningDebug' because:
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[included builds,5,main]) started.
+:app:writeDebugAppMetadata (Thread[included builds,5,main]) started.
+
+> Task :app:writeDebugAppMetadata
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Caching has been disabled for the task
+Task ':app:writeDebugAppMetadata' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[included builds,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[included builds,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:packageDebug (Thread[included builds,5,main]) started.
+:app:packageDebug (Thread[included builds,5,main]) started.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:packageDebug'.
+Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[Execution worker,5,main]) started.
+:app:createDebugApkListingFileRedirect (Thread[Execution worker,5,main]) started.
+
+> Task :app:createDebugApkListingFileRedirect
+Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+  Caching has been disabled for the task
+Task ':app:createDebugApkListingFileRedirect' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:assembleDebug (Thread[Execution worker,5,main]) started.
+:app:assembleDebug (Thread[Execution worker,5,main]) started.
+
+> Task :app:assembleDebug
+Skipping task ':app:assembleDebug' as it has no actions.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 38s
+31 actionable tasks: 10 executed, 21 from cache
+Some of the file system contents retained in the virtual file system are on file systems that Gradle doesn't support watching. The relevant state was discarded to ensure changes to these locations are properly detected. You can override this by explicitly enabling file system watching.
+
+### Critical error grep
+------------------------------------------------------------
+
+DONE. Report written to: /workspaces/Netprobe/_NETPROBE_DUMP.txt
+Now run:  cat _NETPROBE_DUMP.txt

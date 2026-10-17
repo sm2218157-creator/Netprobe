@@ -1,0 +1,120 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — restore full strings/colors/styles
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: استعادة الملفات الأساسية ═══
+  ✅ strings.xml (17973 B)
+  ✅ colors.xml (25418 B)
+  ✅ styles.xml (500195 B)
+
+═══ PHASE 2: فلترة ضيقة — فقط @android:color/private ═══
+  ✓ colors.xml
+  ✓ styles.xml
+  ✓ strings.xml
+
+═══ PHASE 3: فحص النصوص الحرجة ═══
+  ✅ app_name
+  ✅ menu_home
+  ✅ menu_fast_scan
+  ✅ menu_discovery
+  ✅ menu_nmap
+
+═══ PHASE 4: البناء ═══
+        ?? r7;
+             ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/channels/ChannelsKt__DeprecatedKt.java:2065: error: illegal start of expression
+                            ?? r72 = (SendChannel) channelsKt__DeprecatedKt$toChannel$12.L$0;
+                            ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/channels/ChannelsKt__DeprecatedKt.java:2065: error: illegal start of expression
+                            ?? r72 = (SendChannel) channelsKt__DeprecatedKt$toChannel$12.L$0;
+                             ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/channels/ChannelsKt__DeprecatedKt.java:2065: error: : expected
+                            ?? r72 = (SendChannel) channelsKt__DeprecatedKt$toChannel$12.L$0;
+                                                                                            ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/TimeoutKt.java:64: error: illegal start of expression
+                                ?? r6 = (T) new TimeoutCoroutine(j, timeoutKt$withTimeoutOrNull$12);
+                                ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/TimeoutKt.java:64: error: illegal start of expression
+                                ?? r6 = (T) new TimeoutCoroutine(j, timeoutKt$withTimeoutOrNull$12);
+                                 ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/TimeoutKt.java:64: error: : expected
+                                ?? r6 = (T) new TimeoutCoroutine(j, timeoutKt$withTimeoutOrNull$12);
+                                                                                                   ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:20: error: <identifier> expected
+    private static final CoroutineDispatcher default;
+                                            ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:29: error: orphaned default
+        default = unlimitedIoScheduler.limitedParallelism(systemProp$default);
+        ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:29: error: : or -> expected
+        default = unlimitedIoScheduler.limitedParallelism(systemProp$default);
+               ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:29: error: illegal start of expression
+        default = unlimitedIoScheduler.limitedParallelism(systemProp$default);
+                ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:50: error: orphaned default
+        default.mo1770dispatch(context, block);
+        ^
+/workspaces/NetProbe_rebuilt/app/src/main/java/kotlinx/coroutines/scheduling/DefaultIoScheduler.java:50: error: : or -> expected
+        default.mo1770dispatch(context, block);
+               ^
+100 errors
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 16s
+28 actionable tasks: 14 executed, 14 from cache
+
+═══ PHASE 5: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد (أول 25) ---
+
+--- أخطاء Java ---
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/RecyclerView.java:3735: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/RecyclerView.java:3735: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/RecyclerView.java:3735: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1055: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1055: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1055: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1056: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1056: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/recyclerview/widget/StaggeredGridLayoutManager.java:1056: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/appcompat/widget/ActionMenuView.java:152: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/appcompat/widget/ActionMenuView.java:152: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/appcompat/widget/ActionMenuView.java:152: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/content/res/GrowingArrayUtils.java:11: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/content/res/GrowingArrayUtils.java:11: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/content/res/GrowingArrayUtils.java:11: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/widget/AutoSizeableTextView.java:9: error: = expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/widget/AutoSizeableTextView.java:27: error: initializers not allowed in interfaces
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/graphics/BitmapCompat.java:45: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/graphics/BitmapCompat.java:45: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/core/graphics/BitmapCompat.java:45: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/fragment/app/FragmentManager.java:1430: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/fragment/app/FragmentManager.java:1430: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/fragment/app/FragmentManager.java:1430: error: : expected
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/constraintlayout/solver/widgets/Flow.java:216: error: illegal start of expression
+/workspaces/NetProbe_rebuilt/app/src/main/java/androidx/constraintlayout/solver/widgets/Flow.java:216: error: illegal start of expression
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_RESTOREFULL.txt
+═══════════════════════════════════════════════════

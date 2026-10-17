@@ -1,0 +1,151 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — strip library resources
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: حذف ملفات موارد المكتبات ═══
+  🗑 abc_* (260)
+  🗑 mtrl_* (139)
+  🗑 m3_* (159)
+  🗑 notification_* (23)
+  🗑 design_* (31)
+  🗑 material_* (59)
+  🗑 tooltip_* (2)
+  🗑 switch_* (2)
+  إجمالي محذوف: 675
+
+═══ PHASE 2: حذف values-v* variants ═══
+  🗑 values-v25 (1)
+  🗑 values-v26 (1)
+  🗑 values-v28 (2)
+  🗑 values-v31 (2)
+  🗑 values-v34 (1)
+  🗑 values-vi (2)
+  🗑 values-night (1)
+
+═══ PHASE 3: إعادة بناء values/ ═══
+  🗑 attrs.xml
+  🗑 dimens.xml
+  🗑 integers.xml
+  🗑 bools.xml
+  🗑 plurals.xml
+  🗑 drawables.xml
+  🧹 colors.xml
+  🧹 styles.xml
+  🧹 strings.xml
+
+  ✅ values/ بعد التنظيف:
+    colors.xml (2497 B)
+    strings.xml (6417 B)
+    styles.xml (24805 B)
+
+═══ PHASE 4: ضمان القيم الأساسية ═══
+  ✅ added 10 colors
+  ✅ added 1 styles
+
+═══ PHASE 5: ملفات res النهائية ═══
+  مجلدات: 129
+  ملفات:  316
+
+  --- values ---
+total 48
+drwxr-xr-x+   2 codespace codespace  4096 Oct 14 18:53 .
+drwxrwxrwx+ 130 codespace codespace  4096 Oct 14 18:53 ..
+-rw-rw-rw-    1 codespace codespace  2924 Oct 14 18:53 colors.xml
+-rw-rw-rw-    1 codespace codespace  6417 Oct 14 18:53 strings.xml
+-rw-rw-rw-    1 codespace codespace 25072 Oct 14 18:53 styles.xml
+
+═══ PHASE 6: البناء ═══
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:8: AAPT: error: resource id/scrollDiscovery (aka com.xk.netprobe:id/scrollDiscovery) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:9: AAPT: error: resource id/tvDiscoveryOutput (aka com.xk.netprobe:id/tvDiscoveryOutput) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:11: AAPT: error: resource id/recyclerDevices (aka com.xk.netprobe:id/recyclerDevices) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:8: AAPT: error: resource id/btnFilterAll (aka com.xk.netprobe:id/btnFilterAll) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:9: AAPT: error: resource id/btnFilterToday (aka com.xk.netprobe:id/btnFilterToday) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:10: AAPT: error: resource id/btnFilterWeek (aka com.xk.netprobe:id/btnFilterWeek) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:12: AAPT: error: resource id/tvHistoryEmpty (aka com.xk.netprobe:id/tvHistoryEmpty) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:13: AAPT: error: resource id/recyclerHistory (aka com.xk.netprobe:id/recyclerHistory) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:8: AAPT: error: resource id/tvInstallStatus (aka com.xk.netprobe:id/tvInstallStatus) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:9: AAPT: error: resource id/btnInstallBasic (aka com.xk.netprobe:id/btnInstallBasic) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:10: AAPT: error: resource id/btnInstallAdvanced (aka com.xk.netprobe:id/btnInstallAdvanced) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:11: AAPT: error: resource id/btnInstallWireless (aka com.xk.netprobe:id/btnInstallWireless) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:12: AAPT: error: resource id/btnTestTermux (aka com.xk.netprobe:id/btnTestTermux) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:3: AAPT: error: resource id/drawerLayout (aka com.xk.netprobe:id/drawerLayout) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:6: AAPT: error: resource id/btnMenu (aka com.xk.netprobe:id/btnMenu) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:14: AAPT: error: resource id/tvNetworkTitle (aka com.xk.netprobe:id/tvNetworkTitle) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:15: AAPT: error: resource id/tvNetworkDetails (aka com.xk.netprobe:id/tvNetworkDetails) not found.
+         
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7s
+24 actionable tasks: 13 executed, 11 from cache
+
+═══ PHASE 7: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- Duplicate errors (first 5) ---
+
+--- أخطاء الموارد ---
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:5: AAPT: error: resource id/btnDiscoveryScan (aka com.xk.netprobe:id/btnDiscoveryScan) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:6: AAPT: error: resource id/discoveryProgress (aka com.xk.netprobe:id/discoveryProgress) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:7: AAPT: error: resource id/tvDiscoveryInfo (aka com.xk.netprobe:id/tvDiscoveryInfo) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:8: AAPT: error: resource id/scrollDiscovery (aka com.xk.netprobe:id/scrollDiscovery) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:9: AAPT: error: resource id/tvDiscoveryOutput (aka com.xk.netprobe:id/tvDiscoveryOutput) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:11: AAPT: error: resource id/recyclerDevices (aka com.xk.netprobe:id/recyclerDevices) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:8: AAPT: error: resource id/btnFilterAll (aka com.xk.netprobe:id/btnFilterAll) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:9: AAPT: error: resource id/btnFilterToday (aka com.xk.netprobe:id/btnFilterToday) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:10: AAPT: error: resource id/btnFilterWeek (aka com.xk.netprobe:id/btnFilterWeek) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:12: AAPT: error: resource id/tvHistoryEmpty (aka com.xk.netprobe:id/tvHistoryEmpty) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_history.xml:13: AAPT: error: resource id/recyclerHistory (aka com.xk.netprobe:id/recyclerHistory) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:8: AAPT: error: resource id/tvInstallStatus (aka com.xk.netprobe:id/tvInstallStatus) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:9: AAPT: error: resource id/btnInstallBasic (aka com.xk.netprobe:id/btnInstallBasic) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:10: AAPT: error: resource id/btnInstallAdvanced (aka com.xk.netprobe:id/btnInstallAdvanced) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:11: AAPT: error: resource id/btnInstallWireless (aka com.xk.netprobe:id/btnInstallWireless) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_install.xml:12: AAPT: error: resource id/btnTestTermux (aka com.xk.netprobe:id/btnTestTermux) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:3: AAPT: error: resource id/drawerLayout (aka com.xk.netprobe:id/drawerLayout) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:6: AAPT: error: resource id/btnMenu (aka com.xk.netprobe:id/btnMenu) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:14: AAPT: error: resource id/tvNetworkTitle (aka com.xk.netprobe:id/tvNetworkTitle) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:15: AAPT: error: resource id/tvNetworkDetails (aka com.xk.netprobe:id/tvNetworkDetails) not found.
+
+--- أخطاء Java ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:5: AAPT: error: resource id/btnDiscoveryScan (aka com.xk.netprobe:id/btnDiscoveryScan) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_discovery.xml:6: AAPT: error: resource id/discoveryProgress (aka com.xk.netprobe:id/discoveryProgress) not found.
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_FILTER.txt
+═══════════════════════════════════════════════════

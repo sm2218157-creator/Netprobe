@@ -1,0 +1,143 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — recover app sources
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: البحث عن مصادر التطبيق ═══
+  🔍 البحث عن MainActivity.java في /workspaces/v33_recovered
+  ✅ وجدت عبر MainActivity: /workspaces/v33_recovered/jadx_out/sources/com/p000xk/netprobe
+
+═══ PHASE 2: نسخ المصادر ═══
+  ✅ نسخ: 23 ملف إلى com/xk/netprobe
+
+  --- قائمة الملفات ---
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/AboutActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/C0808R.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/DiscoveryActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HackActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/History.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HistoryActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HistoryDB.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/InstallActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/JavaScannerActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/MainActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/NetworkDiscovery.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/NetworkUtils.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/Prefs.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ScanActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/SettingsActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ShizukuHelper.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/SplashActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/StatusActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/TermuxBridge.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/TermuxScannerActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ToolsActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/WifiScannerActivity.java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/WirelessActivity.java
+
+═══ PHASE 3: حذف حزم المكتبات من java/ ═══
+  🗑 rikka (15)
+
+  --- java/ النهائي ---
+/workspaces/NetProbe_rebuilt/app/src/main/java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku/api
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku/server
+
+═══ PHASE 4: فحص ═══
+  ملفات التطبيق: 23
+
+═══ PHASE 5: البناء ═══
+> Task :app:parseDebugLocalResources FROM-CACHE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :app:processDebugMainManifest FROM-CACHE
+> Task :app:processDebugManifest FROM-CACHE
+> Task :app:processDebugManifestForPackage FROM-CACHE
+> Task :app:processDebugResources FROM-CACHE
+
+> Task :app:compileDebugJavaWithJavac
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ToolsActivity.java:78: error: cannot find symbol
+    public class ToolAdapter extends RecyclerView.Adapter<C0810VH> {
+                                                          ^
+  symbol:   class C0810VH
+  location: class ToolsActivity
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HackActivity.java:104: error: cannot find symbol
+    public class ToolAdapter extends RecyclerView.Adapter<C0806VH> {
+                                                          ^
+  symbol:   class C0806VH
+  location: class HackActivity
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ScanActivity.java:105: error: cannot find symbol
+    public class ToolAdapter extends RecyclerView.Adapter<C0809VH> {
+                                                          ^
+  symbol:   class C0809VH
+  location: class ScanActivity
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/DiscoveryActivity.java:210: error: cannot find symbol
+    public static class DeviceAdapter extends RecyclerView.Adapter<C0805VH> {
+                                                                   ^
+  symbol:   class C0805VH
+  location: class DiscoveryActivity
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HistoryActivity.java:66: error: cannot find symbol
+    public static class HistoryAdapter extends RecyclerView.Adapter<C0807VH> {
+                                                                    ^
+  symbol:   class C0807VH
+  location: class HistoryActivity
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+5 errors
+
+> Task :app:compileDebugJavaWithJavac FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 5s
+16 actionable tasks: 5 executed, 11 from cache
+
+═══ PHASE 6: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء Java (أول 40) ---
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ToolsActivity.java:78: error: cannot find symbol
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HackActivity.java:104: error: cannot find symbol
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/ScanActivity.java:105: error: cannot find symbol
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/DiscoveryActivity.java:210: error: cannot find symbol
+/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe/HistoryActivity.java:66: error: cannot find symbol
+
+--- الأخطاء الفريدة ---
+error: cannot find symbol
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:compileDebugJavaWithJavac'.
+> Compilation failed; see the compiler error output for details.
+
+* Try:
+> Run with --info option to get more log output.
+> Run with --scan to get full insights.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_RECOVERSRC.txt
+═══════════════════════════════════════════════════

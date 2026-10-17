@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NetProbe</string>
+    <string name="title_main">NetProbe — Nmap Scanner</string>
+    <string name="hint_target">192.168.1.1 أو example.com</string>
+    <string name="hint_extra_args">أوامر إضافية (اختياري)</string>
+    <string name="btn_start">ابدأ الفحص</string>
+    <string name="btn_wifi">ماسح WiFi</string>
+    <string name="btn_shizuku">طلب Shizuku</string>
+    <string name="label_shortcuts">اختصارات Nmap:</string>
+    <string name="status_ready">جاهز — أدخل الهدف</string>
+    <string name="terminal_title">طرفية Nmap</string>
+    <string name="btn_stop">إيقاف</string>
+    <string name="btn_clear">مسح</string>
+    <string name="btn_save">حفظ</string>
+    <string name="wifi_title">ماسح الشبكات</string>
+    <string name="wifi_scan">فحص الشبكات</string>
+</resources>

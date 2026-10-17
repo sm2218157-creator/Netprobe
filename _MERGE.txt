@@ -1,0 +1,111 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — merge resources from jadx
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: استخراج كل القيم من jadx ═══
+  colors:   0
+  styles:   0
+  strings:  0
+  dimens:   0
+  bools:    0
+  integers: 0
+  arrays:   0
+  ✅ colors.xml (0)
+  ✅ styles.xml (0)
+  ✅ strings.xml (0)
+
+═══ PHASE 2: ic_launcher ═══
+
+═══ PHASE 3: ملفات values النهائية ═══
+total 108
+drwxr-xr-x+   2 codespace codespace  4096 Oct 14 18:32 .
+drwxrwxrwx+ 144 codespace codespace  4096 Oct 14 18:34 ..
+-rw-rw-rw-    1 codespace codespace  5834 Oct 14 18:05 attrs.xml
+-rw-rw-rw-    1 codespace codespace   243 Oct 14 17:55 bools.xml
+-rw-rw-rw-    1 codespace codespace    64 Oct 14 18:39 colors.xml
+-rw-rw-rw-    1 codespace codespace 58448 Oct 14 17:55 dimens.xml
+-rw-rw-rw-    1 codespace codespace   473 Oct 14 17:55 drawables.xml
+-rw-rw-rw-    1 codespace codespace  4559 Oct 14 17:55 integers.xml
+-rw-rw-rw-    1 codespace codespace   246 Oct 14 17:55 plurals.xml
+-rw-rw-rw-    1 codespace codespace   110 Oct 14 18:39 strings.xml
+-rw-rw-rw-    1 codespace codespace    64 Oct 14 18:39 styles.xml
+
+═══ PHASE 4: البناء ═══
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :app:processDebugMainManifest FROM-CACHE
+> Task :app:processDebugManifest FROM-CACHE
+> Task :app:processDebugManifestForPackage FROM-CACHE
+> Task :app:mergeDebugShaders FROM-CACHE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets FROM-CACHE
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:mergeDebugJavaResource
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugResources
+> Task :app:mergeExtDexDebug FROM-CACHE
+> Task :app:mergeLibDexDebug FROM-CACHE
+> Task :app:mergeDebugJniLibFolders FROM-CACHE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/AndroidManifest.xml:25:5-128:19: AAPT: error: resource style/AppTheme (aka com.xk.netprobe:style/AppTheme) not found.
+         
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7s
+27 actionable tasks: 13 executed, 14 from cache
+
+═══ PHASE 5: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد ---
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/AndroidManifest.xml:25:5-128:19: AAPT: error: resource style/AppTheme (aka com.xk.netprobe:style/AppTheme) not found.
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/AndroidManifest.xml:25:5-128:19: AAPT: error: resource style/AppTheme (aka com.xk.netprobe:style/AppTheme) not found.
+         
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+--- أخطاء Java ---
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_MERGE.txt
+═══════════════════════════════════════════════════

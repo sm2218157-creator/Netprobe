@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="#000000">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:padding="8dp" android:background="#1A1A1A">
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="@string/terminal_title"
+            android:textColor="#00FF00" android:fontFamily="monospace"
+            android:textSize="13sp" android:textStyle="bold"/>
+        <Button android:id="@+id/btnStop" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_stop"
+            android:textSize="11sp" android:backgroundTint="#F85149"
+            android:minWidth="0dp" android:layout_marginEnd="4dp"/>
+        <Button android:id="@+id/btnClear" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_clear"
+            android:textSize="11sp" android:backgroundTint="#30363D"
+            android:minWidth="0dp" android:layout_marginEnd="4dp"/>
+        <Button android:id="@+id/btnSave" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/btn_save"
+            android:textSize="11sp" android:backgroundTint="#30363D" android:minWidth="0dp"/>
+    </LinearLayout>
+    <TextView android:id="@+id/tvCommand"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:padding="8dp" android:background="#0A0A0A"
+        android:textColor="#00E5FF" android:fontFamily="monospace" android:textSize="11sp"/>
+    <ScrollView android:id="@+id/scrollOutput"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:background="#000000">
+        <TextView android:id="@+id/tvOutput"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:padding="8dp" android:textColor="#00FF00"
+            android:fontFamily="monospace" android:textSize="10sp"/>
+    </ScrollView>
+    <ProgressBar android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:indeterminate="true" android:visibility="gone"/>
+</LinearLayout>

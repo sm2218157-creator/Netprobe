@@ -1,0 +1,92 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — regenerate ids.xml
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: استخراج IDs من apktool ═══
+  استخراج: 531 id
+  + من layouts وjava: 564 id
+  ✅ ids.xml (564 id)
+  ✅ fixed 19 layout files (@id/x → @+id/x)
+
+═══ PHASE 2: ids.xml ═══
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="ALT"/>
+    <item type="id" name="BOTTOM_END"/>
+    <item type="id" name="BOTTOM_START"/>
+    <item type="id" name="CTRL"/>
+    <item type="id" name="FUNCTION"/>
+    <item type="id" name="KEYCODE_0"/>
+    <item type="id" name="META"/>
+    <item type="id" name="NO_DEBUG"/>
+    <item type="id" name="SHIFT"/>
+    <item type="id" name="SHOW_ALL"/>
+    <item type="id" name="SHOW_PATH"/>
+    <item type="id" name="SHOW_PROGRESS"/>
+    <item type="id" name="SYM"/>
+    <item type="id" name="TOP_END"/>
+    <item type="id" name="TOP_START"/>
+    <item type="id" name="accelerate"/>
+    <item type="id" name="accessibilityActionContextClick"/>
+    <item type="id" name="accessibilityActionHideTooltip"/>
+  ...
+  إجمالي: 564
+
+═══ PHASE 3: البناء ═══
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/values/ids.xml: Resource and asset merger: class is not a valid resource name (reserved Java keyword)
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/values/ids.xml: Error: class is not a valid resource name (reserved Java keyword)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2s
+7 actionable tasks: 4 executed, 3 from cache
+
+═══ PHASE 4: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد ---
+
+--- أخطاء Java ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/values/ids.xml: Error: class is not a valid resource name (reserved Java keyword)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_GENIDS.txt
+═══════════════════════════════════════════════════

@@ -1,0 +1,131 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — purge color-v31 + framework refs
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: حذف مجلدات Material 3 palette ═══
+  🗑 deleting res/color-v31 (32 files)
+  🗑 deleting res/color-night (3 files)
+
+═══ PHASE 2: حذف أي ملفات m3_* ═══
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_btn_elevated_btn_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_chip_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_card_elevated_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_extended_fab_change_size_expand_motion_spec.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_btn_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_appbar_state_list_animator.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_extended_fab_show_motion_spec.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_elevated_chip_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_card_state_list_anim.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_extended_fab_state_list_animator.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_extended_fab_hide_motion_spec.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/animator/m3_extended_fab_change_size_collapse_motion_spec.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout/m3_side_sheet_dialog.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout/m3_auto_complete_simple_item.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout/m3_alert_dialog_actions.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout/m3_alert_dialog_title.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/layout/m3_alert_dialog.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/color/m3_navigation_item_text_color.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/color/m3_default_color_primary_text.xml
+/workspaces/NetProbe_rebuilt/app/src/main/res/color/m3_fab_ripple_color_selector.xml
+
+═══ PHASE 3: تنظيف الملفات التي تستشهد بـ @android:color خاصة ═══
+
+  deleted: 0  cleaned: 0
+
+═══ PHASE 4: مجلدات color الباقية ═══
+/workspaces/NetProbe_rebuilt/app/src/main/res/color
+
+═══ PHASE 5: البناء ═══
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :app:processDebugMainManifest FROM-CACHE
+> Task :app:processDebugManifest FROM-CACHE
+> Task :app:processDebugManifestForPackage FROM-CACHE
+> Task :app:mergeDebugShaders FROM-CACHE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets FROM-CACHE
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:mergeDebugJavaResource
+> Task :app:mergeDebugResources
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeExtDexDebug FROM-CACHE
+> Task :app:mergeLibDexDebug FROM-CACHE
+> Task :app:mergeDebugJniLibFolders FROM-CACHE
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+> Task :app:validateSigningDebug
+> Task :app:writeDebugAppMetadata
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:processDebugResources FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:88: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:228: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_settings.xml:28: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_splash.xml:36: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_status.xml:28: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_status.xml:44: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 7s
+27 actionable tasks: 13 executed, 14 from cache
+
+═══ PHASE 6: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد (أول 30 سطر) ---
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:88: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:228: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_settings.xml:28: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_splash.xml:36: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_status.xml:28: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_status.xml:44: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:88: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_main.xml:228: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_settings.xml:28: AAPT: error: resource style/SectionHeader (aka com.xk.netprobe:style/SectionHeader) not found.
+         
+     ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/layout/activity_splash.xml:36: AAPT: error: resource color/border (aka com.xk.netprobe:color/border) not found.
+
+--- أخطاء Java ---
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_PURGE2.txt
+═══════════════════════════════════════════════════

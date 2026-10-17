@@ -1,0 +1,53 @@
+═══════════════════════════════════════════════════
+  NetProbe — Publish v5.2
+  2026-10-16T13:58:11Z
+═══════════════════════════════════════════════════
+
+═══ [1/7] بناء APK ═══
+I: Building apk file...
+I: Copying unknown files/dir...
+I: Built apk into: /workspaces/NetProbe-v5.2.apk
+  ✅ /workspaces/NetProbe-v5.2.apk (5.0M)
+
+═══ [2/7] توقيع ═══
+  ✅ موقّع
+
+═══ [3/7] ZIP + الظهور في المستكشف ═══
+  ✅ /workspaces/Netprobe/NetProbe-v5.2.apk
+  ✅ /workspaces/Netprobe/NetProbe-v5.2.zip
+
+═══ [4/7] بنية المستودع ═══
+  → مزامنة المصدر
+
+═══ [5/7] ملفات التوثيق ═══
+  ✅ README.md, BUILD.md, SETUP.md, CHANGELOG.md
+
+═══ [6/7] فحص سلامة المشروع ═══
+  smali/        : 6202 ملف
+  smali_classes2: 236 ملف
+  smali_classes3: 80 ملف
+  res/          : 1011 ملف
+  assets/       : 0 ملف
+  lib/          : 0 ملف
+  Manifest      : موجود
+
+═══ [7/7] GitHub ═══
+  remote: https://github.com/sm2218157-creator/Netprobe
+
+  → محاولة الدفع...
+To https://github.com/sm2218157-creator/Netprobe
+   e856268..90acf7f  main -> main
+branch 'main' set up to track 'origin/main'.
+
+═══════════════════════════════════════════════════
+  ✅ v5.2 جاهز
+
+  📱 APK    : /workspaces/Netprobe/NetProbe-v5.2.apk
+  📦 ZIP    : /workspaces/Netprobe/NetProbe-v5.2.zip
+  💾 Repo   : /workspaces/NetProbe-Source
+  🌐 GitHub : https://github.com/sm2218157-creator/Netprobe
+  📋 Report : /workspaces/Netprobe/_PUBLISH_v5.2.txt
+
+  📲 لتحميل على أندرويد:
+     افتح الشريط الجانبي → NetProbe-v5.2.zip → Download
+═══════════════════════════════════════════════════

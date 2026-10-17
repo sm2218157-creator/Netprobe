@@ -1,0 +1,149 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — rebuild + fix + rebuild
+  2026-10-14T17:49:10Z
+═══════════════════════════════════════════════════
+
+═══ 1. فحص المصدر المُفكوك ═══
+  عدد ملفات .java: 2952
+
+═══ 2. خطأ البناء السابق (إن وجد) ═══
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s
+6 actionable tasks: 3 executed, 2 from cache, 1 up-to-date
+  ---
+> Task :app:mergeDebugResources FAILED
+FAILURE: Build failed with an exception.
+Execution failed for task ':app:mergeDebugResources'.
+
+═══ 3. تنظيف وإعادة إنشاء المشروع ═══
+
+═══ 4. نسخ المصدر ═══
+  ✅ sources
+  إجمالي ملفات جافا: 2950
+
+═══ 5. نسخ الموارد ═══
+  ✅ من jadx
+  مجلدات res: 4
+
+═══ 6. معالجة AndroidManifest ═══
+  ✅ من jadx
+  🔧 حذف package= (يُستبدل بـ namespace في build.gradle)
+
+═══ 7. الأصول والمكتبات ═══
+
+═══ 8. ملفات Gradle ═══
+  ✅
+
+═══ 9. البناء (محاولة 1) ═══
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:clean UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Resource and asset merger: The file name must end with .xml
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 6s
+7 actionable tasks: 4 executed, 2 from cache, 1 up-to-date
+
+═══ 10. فشل البناء — إصلاح تلقائي ═══
+  أخطاء compile مكتشفة:
+
+
+  🔧 إعادة محاولة بعد التنظيف...
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Resource and asset merger: The file name must end with .xml
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+7 actionable tasks: 4 executed, 3 from cache
+
+═══ 11. النتيجة ═══
+
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED — diagnostics:
+═══════════════════════════════════════════════════
+
+--- أخطاء compile ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/kotlin/kotlin.kotlin_builtins: Error: The file name must end with .xml
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+6 actionable tasks: 1 executed, 5 up-to-date
+
+--- الملفات التي بها أخطاء ---
+
+اللوج الكامل: /workspaces/Netprobe/_rebuild_fix.log
+لوج الإصلاح: /tmp/fix.log

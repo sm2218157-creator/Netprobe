@@ -1,0 +1,35 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — purge library sources
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: حذف حزم المكتبات ═══
+  🗑 androidx (1149 ملف)
+  🗑 kotlin (697 ملف)
+  🗑 kotlinx (588 ملف)
+  🗑 com/google (451 ملف)
+  🗑 org/jetbrains (7 ملف)
+  🗑 org/intellij (10 ملف)
+  🗑 android/support (5 ملف)
+  🗑 com/p000xk (23 ملف)
+  🗑 android/
+  🗑 org/
+
+  --- ما بقي في java/ ---
+/workspaces/NetProbe_rebuilt/app/src/main/java
+/workspaces/NetProbe_rebuilt/app/src/main/java/com
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku/api
+/workspaces/NetProbe_rebuilt/app/src/main/java/moe/shizuku/server
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/shizuku
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/shizuku/aidl
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/shizuku/api
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/shizuku/provider
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/shizuku/shared
+/workspaces/NetProbe_rebuilt/app/src/main/java/rikka/sui
+
+═══ PHASE 2: فحص مصادر التطبيق ═══
+  ملفات com/xk/netprobe: 0
+find: ‘/workspaces/NetProbe_rebuilt/app/src/main/java/com/xk/netprobe’: No such file or directory
+  ❌ لا توجد مصادر تطبيق — إجهاض

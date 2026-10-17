@@ -1,0 +1,165 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — strip library attrs + rebuild
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: تنظيف values/ ═══
+  🗑 deleted: public.xml
+  🧹 /workspaces/NetProbe_rebuilt/app/src/main/res/values/attrs.xml
+
+  cleaned: 1  deleted: 1
+
+--- ملفات values بعد التنظيف ---
+
+═══ PHASE 2: تنظيف Manifest ═══
+  ✅
+
+═══ PHASE 3: البناء ═══
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:packageDebugResources
+> Task :app:parseDebugLocalResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :app:mergeDebugResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :app:mergeDebugShaders FROM-CACHE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets FROM-CACHE
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :app:processDebugJavaRes NO-SOURCE
+> Task :app:processDebugManifestForPackage
+> Task :app:mergeDebugJavaResource
+> Task :app:checkDebugDuplicateClasses
+> Task :app:processDebugResources FAILED
+> Task :app:mergeExtDexDebug
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:3: error: resource android:color/Teal_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:4: error: resource android:color/Teal_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:5: error: resource android:color/Blue_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:6: error: resource android:color/Red_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:7: error: resource android:color/Red_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:8: error: resource android:color/Purple_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:9: error: resource android:color/Purple_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:10: error: resource android:color/Pink_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:11: error: resource android:color/Pink_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:12: error: resource android:color/Indigo_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:13: error: resource android:color/Indigo_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:14: error: resource android:color/GM2_grey_800 is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:15: error: resource android:color/Blue_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:16: error: resource android:color/background_cache_hint_selector_device_default is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:17: error: resource android:color/autofilled_highlight is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:18: error: resource android:color/accent_device_default is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:19: error: resource android:color/autofill_background_material_light is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:20: error: resource android:color/autofill_background_material_dark is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:21: error: resource android:color/accessibility_focus_highlight not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:22: error: resource android:color/accent_material_light is private.
+
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.10.2/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 26s
+22 actionable tasks: 14 executed, 8 from cache
+
+═══ PHASE 4: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء AAPT/mergeResources ---
+
+--- أخطاء compile جافا ---
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:3: error: resource android:color/Teal_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:4: error: resource android:color/Teal_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:5: error: resource android:color/Blue_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:6: error: resource android:color/Red_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:7: error: resource android:color/Red_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:8: error: resource android:color/Purple_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:9: error: resource android:color/Purple_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:10: error: resource android:color/Pink_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:11: error: resource android:color/Pink_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:12: error: resource android:color/Indigo_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:13: error: resource android:color/Indigo_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:14: error: resource android:color/GM2_grey_800 is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:15: error: resource android:color/Blue_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:16: error: resource android:color/background_cache_hint_selector_device_default is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:17: error: resource android:color/autofilled_highlight is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:18: error: resource android:color/accent_device_default is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:19: error: resource android:color/autofill_background_material_light is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:20: error: resource android:color/autofill_background_material_dark is private.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:21: error: resource android:color/accessibility_focus_highlight not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:22: error: resource android:color/accent_material_light is private.
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:processDebugResources'.
+> A failure occurred while executing com.android.build.gradle.internal.res.LinkApplicationAndroidResourcesTask$TaskAction
+   > Android resource linking failed
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:3: error: resource android:color/Teal_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:4: error: resource android:color/Teal_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:5: error: resource android:color/Blue_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:6: error: resource android:color/Red_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:7: error: resource android:color/Red_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:8: error: resource android:color/Purple_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:9: error: resource android:color/Purple_700 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:10: error: resource android:color/Pink_800 not found.
+     com.xk.netprobe.app-mergeDebugResources-30:/values-v31/values-v31.xml:11: error: resource android:color/Pink_700 not found.
+
+--- ملفات بها أخطاء ---
+/values-v31/values-v31.xml:10
+/values-v31/values-v31.xml:11
+/values-v31/values-v31.xml:12
+/values-v31/values-v31.xml:13
+/values-v31/values-v31.xml:14
+/values-v31/values-v31.xml:15
+/values-v31/values-v31.xml:16
+/values-v31/values-v31.xml:17
+/values-v31/values-v31.xml:18
+/values-v31/values-v31.xml:19
+/values-v31/values-v31.xml:20
+/values-v31/values-v31.xml:21
+/values-v31/values-v31.xml:22
+/values-v31/values-v31.xml:3
+/values-v31/values-v31.xml:4
+/values-v31/values-v31.xml:5
+/values-v31/values-v31.xml:6
+/values-v31/values-v31.xml:7
+/values-v31/values-v31.xml:8
+/values-v31/values-v31.xml:9
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_FINAL.txt
+═══════════════════════════════════════════════════

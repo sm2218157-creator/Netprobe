@@ -1,0 +1,126 @@
+═══════════════════════════════════════════════════
+  NetProbe v3.3 — apktool full rebuild
+═══════════════════════════════════════════════════
+
+═══ PHASE 1: تثبيت apktool ═══
+  📥 تحميل apktool.jar
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 93 22.1M   93 20.7M    0     0  24.1M      0 --:--:-- --:--:-- --:--:-- 24.1M100 22.1M  100 22.1M    0     0  25.4M      0 --:--:-- --:--:-- --:--:--  109M
+  ✅ apktool.jar جاهز
+  CMD: java -jar /workspaces/apktool.jar
+
+═══ PHASE 2: فحص APK ═══
+-rw-rw-rw- 1 codespace codespace 5561981 Oct 14 14:43 /workspaces/Netprobe/NetProbe-v3.3.apk
+
+═══ PHASE 3: فك APK بـ apktool ═══
+I: Using Apktool 2.9.3 on NetProbe-v3.3.apk
+I: Loading resource table...
+I: Decoding file-resources...
+I: Loading resource table from file: /home/codespace/.local/share/apktool/framework/1.apk
+I: Decoding values */* XMLs...
+I: Decoding AndroidManifest.xml with resources...
+I: Regular manifest package...
+I: Baksmaling classes.dex...
+I: Baksmaling classes2.dex...
+I: Baksmaling classes3.dex...
+I: Copying assets and libs...
+I: Copying unknown files...
+I: Copying original files...
+I: Copying META-INF/services directory
+  ✅ /workspaces/v33_recovered/apktool_out/res
+
+═══ PHASE 4: قيم apktool/values ═══
+total 1148
+drwxrwxrwx+   2 codespace codespace   4096 Oct 14 18:46 .
+drwxrwxrwx+ 137 codespace codespace   4096 Oct 14 18:46 ..
+-rw-rw-rw-    1 codespace codespace  88590 Oct 14 18:46 attrs.xml
+-rw-rw-rw-    1 codespace codespace    243 Oct 14 18:46 bools.xml
+-rw-rw-rw-    1 codespace codespace  25418 Oct 14 18:46 colors.xml
+-rw-rw-rw-    1 codespace codespace  62664 Oct 14 18:46 dimens.xml
+-rw-rw-rw-    1 codespace codespace    505 Oct 14 18:46 drawables.xml
+-rw-rw-rw-    1 codespace codespace  16779 Oct 14 18:46 ids.xml
+-rw-rw-rw-    1 codespace codespace   4595 Oct 14 18:46 integers.xml
+-rw-rw-rw-    1 codespace codespace    246 Oct 14 18:46 plurals.xml
+-rw-rw-rw-    1 codespace codespace 417121 Oct 14 18:46 public.xml
+-rw-rw-rw-    1 codespace codespace  17973 Oct 14 18:46 strings.xml
+-rw-rw-rw-    1 codespace codespace 500195 Oct 14 18:46 styles.xml
+
+  عدد الملفات: 11
+
+═══ PHASE 5: نسخ كل الموارد إلى المشروع ═══
+  ✅ نسخ كامل
+  مجلدات res: 136
+  ✅ AndroidManifest من apktool
+
+═══ PHASE 6: تنظيف إشارات إطار أندرويد الخاصة ═══
+  🗑 deleted values/public.xml
+  🗑 deleted values/ids.xml
+
+  إجمالي التنظيفات: 2
+
+═══ PHASE 7: فحص AppTheme ═══
+
+═══ PHASE 8: البناء ═══
+
+> Configure project :app
+WARNING: The option setting 'android.defaults.buildfeatures.buildconfig=true' is deprecated.
+The current default is 'false'.
+It will be removed in version 9.0 of the Android Gradle plugin.
+You can resolve this warning in Android Studio via `Refactor` > `Migrate BuildConfig to Gradle Build Files`
+
+> Task :app:clean
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources UP-TO-DATE
+
+> Task :app:mergeDebugResources FAILED
+ERROR: /workspaces/NetProbe_rebuilt/app/src/main/res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__2.xml: Resource and asset merger: '$' is not a valid file-based resource name character: File-based resource names must contain only lowercase a-z, 0-9, or underscore
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__2.xml: Error: '$' is not a valid file-based resource name character: File-based resource names must contain only lowercase a-z, 0-9, or underscore
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 7s
+7 actionable tasks: 4 executed, 3 from cache
+
+═══ PHASE 9: النتيجة ═══
+═══════════════════════════════════════════════════
+  ❌ BUILD FAILED
+═══════════════════════════════════════════════════
+
+--- أخطاء الموارد ---
+
+--- أخطاء Java ---
+
+--- What went wrong ---
+* What went wrong:
+Execution failed for task ':app:mergeDebugResources'.
+> /workspaces/NetProbe_rebuilt/app/src/main/res/drawable/$mtrl_checkbox_button_icon_checked_unchecked__2.xml: Error: '$' is not a valid file-based resource name character: File-based resource names must contain only lowercase a-z, 0-9, or underscore
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 7s
+
+═══════════════════════════════════════════════════
+  REPORT: /workspaces/Netprobe/_APKTOOL2.txt
+═══════════════════════════════════════════════════
