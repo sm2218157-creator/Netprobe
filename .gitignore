@@ -1,6 +1,5 @@
 *.zip
 *.apk
-*.jar
 .gradle/
 build/
 app/build/
@@ -8,3 +7,4 @@ local.properties
 .idea/
 *.iml
 .DS_Store
+!gradle/wrapper/gradle-wrapper.jar
