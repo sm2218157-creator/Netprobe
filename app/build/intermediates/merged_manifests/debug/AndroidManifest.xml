@@ -18,6 +18,8 @@
         <package android:name="com.termux" />
     </queries>
 
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+
     <permission
         android:name="com.xk.netprobe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -43,6 +45,10 @@
         <activity
             android:name="com.xk.netprobe.LocalNetworkActivity"
             android:exported="false" />
+
+        <meta-data
+            android:name="moe.shizuku.client.V3_SUPPORT"
+            android:value="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

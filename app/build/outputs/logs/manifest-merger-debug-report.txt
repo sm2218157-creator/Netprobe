@@ -11,6 +11,8 @@ MERGED from [androidx.appcompat:appcompat:1.6.1] /home/codespace/.gradle/caches/
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /home/codespace/.gradle/caches/8.10.2/transforms/8c4df4e64cc954e856be9a381e0df8cf/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/codespace/.gradle/caches/8.10.2/transforms/f54f7a9842d5963ef5beb79101988a49/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/d2e7d495d34b54f8486b4619d70dfb2b/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:2:1-16:12
+MERGED from [dev.rikka.shizuku:api:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/51565df3ed2f36ce47946ae5b8913ad3/transformed/api-13.1.5/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.3.6] /home/codespace/.gradle/caches/8.10.2/transforms/10ac2d39403772b1b7cc901f8ea19746/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.8.0] /home/codespace/.gradle/caches/8.10.2/transforms/54a020cd24421c09b9f737ba575a0d41/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /home/codespace/.gradle/caches/8.10.2/transforms/7e65baf77ce50e1a4835ee2c21ec9dfc/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
@@ -36,6 +38,7 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] /home/codespace/.gradle/caches/
 MERGED from [androidx.customview:customview:1.1.0] /home/codespace/.gradle/caches/8.10.2/transforms/4ea6de621164c7792dc4b5a5252427a4/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.9.0] /home/codespace/.gradle/caches/8.10.2/transforms/4692ce45ff4fd8b19e49d2997eeb3154/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/e92715b568cd802ca0968081acda38b2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [dev.rikka.shizuku:shared:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/b37940dc0d7ca35cd8f6bcf192ce011a/transformed/shared-13.1.5/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/codespace/.gradle/caches/8.10.2/transforms/db58d2c3ae74654a31f79b26a71ba460/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.10.2/transforms/adaf2c922b71ca2b039ed85b9eb9aa6f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] /home/codespace/.gradle/caches/8.10.2/transforms/4ffb8f83ea4100df757937372244233f/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
@@ -46,6 +49,7 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/codespace/.gradle/c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/0257381ce17de8e7a33f6b25ea3eeb36/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/35db3b7d141bf5d2b3714254ae96be18/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/codespace/.gradle/caches/8.10.2/transforms/b45d02eeb805b3dd15b10f8c1c269832/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/f1d2c65795966447c4ceab409831cdac/transformed/aidl-13.1.5/AndroidManifest.xml:2:1-7:12
 	package
 		INJECTED from /workspaces/Netprobe/app/src/main/AndroidManifest.xml
 	android:versionName
@@ -87,6 +91,8 @@ MERGED from [com.google.android.material:material:1.11.0] /home/codespace/.gradl
 MERGED from [com.google.android.material:material:1.11.0] /home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/codespace/.gradle/caches/8.10.2/transforms/321880597000625182dadb353051f5b6/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/codespace/.gradle/caches/8.10.2/transforms/321880597000625182dadb353051f5b6/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:10:5-14:19
+MERGED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:10:5-14:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.10.2/transforms/7f80673ae479116867d654c82d910cbf/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.10.2/transforms/7f80673ae479116867d654c82d910cbf/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/codespace/.gradle/caches/8.10.2/transforms/1d65097badc79917cab3f12b64576713/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
@@ -105,6 +111,8 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/codespace/.gradle/cac
 		ADDED from [androidx.core:core:1.9.0] /home/codespace/.gradle/caches/8.10.2/transforms/4692ce45ff4fd8b19e49d2997eeb3154/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:label
 		ADDED from /workspaces/Netprobe/app/src/main/AndroidManifest.xml:9:18-42
+	tools:ignore
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:10:18-69
 	android:icon
 		ADDED from /workspaces/Netprobe/app/src/main/AndroidManifest.xml:9:43-79
 	android:theme
@@ -149,6 +157,10 @@ MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/codespace/.gradle/c
 MERGED from [androidx.recyclerview:recyclerview:1.3.2] /home/codespace/.gradle/caches/8.10.2/transforms/f54f7a9842d5963ef5beb79101988a49/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/d2e7d495d34b54f8486b4619d70dfb2b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/d2e7d495d34b54f8486b4619d70dfb2b/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:6:5-44
+MERGED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:6:5-44
+MERGED from [dev.rikka.shizuku:api:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/51565df3ed2f36ce47946ae5b8913ad3/transformed/api-13.1.5/AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:api:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/51565df3ed2f36ce47946ae5b8913ad3/transformed/api-13.1.5/AndroidManifest.xml:5:5-44
 MERGED from [androidx.fragment:fragment:1.3.6] /home/codespace/.gradle/caches/8.10.2/transforms/10ac2d39403772b1b7cc901f8ea19746/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] /home/codespace/.gradle/caches/8.10.2/transforms/10ac2d39403772b1b7cc901f8ea19746/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.8.0] /home/codespace/.gradle/caches/8.10.2/transforms/54a020cd24421c09b9f737ba575a0d41/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
@@ -199,6 +211,8 @@ MERGED from [androidx.core:core:1.9.0] /home/codespace/.gradle/caches/8.10.2/tra
 MERGED from [androidx.core:core:1.9.0] /home/codespace/.gradle/caches/8.10.2/transforms/4692ce45ff4fd8b19e49d2997eeb3154/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/e92715b568cd802ca0968081acda38b2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/e92715b568cd802ca0968081acda38b2/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [dev.rikka.shizuku:shared:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/b37940dc0d7ca35cd8f6bcf192ce011a/transformed/shared-13.1.5/AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:shared:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/b37940dc0d7ca35cd8f6bcf192ce011a/transformed/shared-13.1.5/AndroidManifest.xml:5:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/codespace/.gradle/caches/8.10.2/transforms/db58d2c3ae74654a31f79b26a71ba460/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/codespace/.gradle/caches/8.10.2/transforms/db58d2c3ae74654a31f79b26a71ba460/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /home/codespace/.gradle/caches/8.10.2/transforms/adaf2c922b71ca2b039ed85b9eb9aa6f/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
@@ -219,10 +233,22 @@ MERGED from [androidx.print:print:1.0.0] /home/codespace/.gradle/caches/8.10.2/t
 MERGED from [androidx.print:print:1.0.0] /home/codespace/.gradle/caches/8.10.2/transforms/35db3b7d141bf5d2b3714254ae96be18/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/codespace/.gradle/caches/8.10.2/transforms/b45d02eeb805b3dd15b10f8c1c269832/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] /home/codespace/.gradle/caches/8.10.2/transforms/b45d02eeb805b3dd15b10f8c1c269832/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/f1d2c65795966447c4ceab409831cdac/transformed/aidl-13.1.5/AndroidManifest.xml:5:5-44
+MERGED from [dev.rikka.shizuku:aidl:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/f1d2c65795966447c4ceab409831cdac/transformed/aidl-13.1.5/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from /workspaces/Netprobe/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from /workspaces/Netprobe/app/src/main/AndroidManifest.xml
+uses-permission#moe.shizuku.manager.permission.API_V23
+ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:8:5-78
+	android:name
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:8:22-75
+meta-data#moe.shizuku.client.V3_SUPPORT
+ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:11:9-13:36
+	android:value
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:13:13-33
+	android:name
+		ADDED from [dev.rikka.shizuku:provider:13.1.5] /home/codespace/.gradle/caches/8.10.2/transforms/e9e6745046444ccdc8c496950a4217a9/transformed/provider-13.1.5/AndroidManifest.xml:12:13-57
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.2.0] /home/codespace/.gradle/caches/8.10.2/transforms/7f80673ae479116867d654c82d910cbf/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /home/codespace/.gradle/caches/8.10.2/transforms/1d65097badc79917cab3f12b64576713/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
