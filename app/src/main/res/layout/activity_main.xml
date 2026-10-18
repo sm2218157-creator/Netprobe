@@ -3,9 +3,9 @@
     <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp">
         <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
             <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NetProbe" android:textColor="#58A6FF" android:textSize="24sp" android:textStyle="bold"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v19.9" android:textColor="#8B949E" android:textSize="12sp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v20.0" android:textColor="#8B949E" android:textSize="12sp"/>
             <TextView android:id="@+id/tvSetupStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Setup needed" android:textColor="#F85149" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="اضغط الزر بالأسفل لنسخ السكربت ولصقه في Termux." android:textColor="#C9D1D9" android:textSize="12sp" android:gravity="center" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="نسخ سكربت التجهيز لـ Termux (للمرة الأولى فقط)." android:textColor="#C9D1D9" android:textSize="12sp" android:gravity="center" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
             <Button android:id="@+id/btnSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SETUP TERMUX" android:textColor="#FFFFFF" android:backgroundTint="#1F6FEB"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

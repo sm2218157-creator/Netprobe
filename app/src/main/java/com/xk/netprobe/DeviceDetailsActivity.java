@@ -30,7 +30,10 @@ public class DeviceDetailsActivity extends AppCompatActivity {
         String outPath = FileHelper.pathOf(this, "deep_ports.txt"); FileHelper.write(this, "deep_ports.txt", "");
         String cmd = "export PATH=/data/data/com.termux/files/usr/bin:$PATH; timeout 60 nmap -sV -F " + ip + " > \"" + outPath + "\" 2>&1; echo DONE >> \"" + outPath + "\"";
         if (!TermuxBridge.runCommand(this, cmd, 404)) {
-            Toast.makeText(this, "Failed to reach Termux", Toast.LENGTH_SHORT).show(); btnDeepScan.setEnabled(true); return;
+            Toast.makeText(this, "Termux is offline. Using basic ports.", Toast.LENGTH_SHORT).show(); 
+            btnDeepScan.setEnabled(true); 
+            tvStatus.setText("Termux offline. Deep scan unavailable.");
+            return;
         }
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
             int secs = 0;

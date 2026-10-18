@@ -25,6 +25,14 @@ public class PortAdapter extends RecyclerView.Adapter<PortAdapter.VH> {
         }
         notifyDataSetChanged();
     }
+    public void setJavaData(List<String> javaPorts) {
+        ports.clear();
+        for (String p : javaPorts) {
+            String[] parts = p.split(" ");
+            ports.add(new String[]{parts[0], parts[1].replace("(", "").replace(")", "")});
+        }
+        notifyDataSetChanged();
+    }
     @NonNull @Override public VH onCreateViewHolder(@NonNull ViewGroup p, int t) { return new VH(LayoutInflater.from(p.getContext()).inflate(R.layout.item_port, p, false)); }
     @Override public void onBindViewHolder(@NonNull VH h, int i) { h.tvNumber.setText(ports.get(i)[0]); h.tvService.setText(ports.get(i)[1]); }
     @Override public int getItemCount() { return ports.size(); }

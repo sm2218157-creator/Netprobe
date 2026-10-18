@@ -65,15 +65,10 @@ public class MainActivity extends AppCompatActivity {
     }
     
     private void launchSetup() {
-        if (!TermuxBridge.isTermuxInstalled(this)) { Toast.makeText(this, "Termux not installed.", Toast.LENGTH_LONG).show(); return; }
-        
         String cmd = SetupScriptStore.SETUP_SCRIPT;
-        
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
-        if (clipboard != null) {
-            clipboard.setPrimaryClip(ClipData.newPlainText("setup", cmd));
-        }
-        Toast.makeText(this, "Copied! Paste in Termux, then press Enter.", Toast.LENGTH_LONG).show();
+        if (clipboard != null) clipboard.setPrimaryClip(ClipData.newPlainText("setup", cmd));
+        Toast.makeText(this, "Copied! Paste in Termux.", Toast.LENGTH_LONG).show();
         tvSetupStatus.setText("Status: Waiting for Termux..."); 
         tvSetupStatus.setTextColor(0xFFF0B72F); 
         startPolling();

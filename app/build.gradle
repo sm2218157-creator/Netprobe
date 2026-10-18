@@ -2,7 +2,7 @@ plugins { id 'com.android.application' }
 android {
     namespace 'com.xk.netprobe'
     compileSdk 34
-    defaultConfig { applicationId "com.xk.netprobe"; minSdk 24; targetSdk 34; versionCode 23; versionName "19.9" }
+    defaultConfig { applicationId "com.xk.netprobe"; minSdk 24; targetSdk 34; versionCode 24; versionName "20.0" }
     buildTypes { release { minifyEnabled false } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
 }

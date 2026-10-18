@@ -9,6 +9,6 @@
     </androidx.cardview.widget.CardView>
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="OPEN PORTS" android:textColor="#58A6FF" android:textSize="12sp" android:textStyle="bold" android:layout_marginBottom="8dp"/>
     <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerPorts" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
-    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ready for Deep Scan." android:textColor="#3FB950" android:layout_gravity="center_horizontal" android:layout_marginTop="8dp"/>
-    <Button android:id="@+id/btnDeepScan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Deep Scan (Service Versions)" android:textColor="#FFFFFF" android:backgroundTint="#DA3633" android:layout_marginTop="8dp"/>
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Basic ports scanned via Java." android:textColor="#3FB950" android:layout_gravity="center_horizontal" android:layout_marginTop="8dp"/>
+    <Button android:id="@+id/btnDeepScan" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Deep Scan (Requires Termux)" android:textColor="#FFFFFF" android:backgroundTint="#DA3633" android:layout_marginTop="8dp"/>
 </LinearLayout>
