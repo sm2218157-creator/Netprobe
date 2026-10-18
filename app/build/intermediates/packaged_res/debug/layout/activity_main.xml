@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/title_main" android:textColor="@color/primary"
+            android:textSize="20sp" android:textStyle="bold" android:gravity="center"
+            android:paddingBottom="16dp"/>
+        <TextView android:id="@+id/tvShizukuStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Privileges: detecting..."
+            android:textColor="@color/text" android:textSize="13sp"
+            android:padding="10dp" android:background="@color/surface"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="الهدف:" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="12dp" android:paddingBottom="6dp"/>
+        <EditText android:id="@+id/etTarget"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/hint_target" android:inputType="textUri"
+            android:padding="14dp" android:background="@color/surface"
+            android:textColor="@color/text" android:textColorHint="@color/text_secondary"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="أوامر إضافية:" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="12dp" android:paddingBottom="6dp"/>
+        <EditText android:id="@+id/etExtraArgs"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="@string/hint_extra_args" android:inputType="text"
+            android:padding="14dp" android:background="@color/surface"
+            android:textColor="@color/text" android:textColorHint="@color/text_secondary"
+            android:fontFamily="monospace"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="@string/label_shortcuts" android:textColor="@color/text"
+            android:textSize="14sp" android:paddingTop="16dp" android:paddingBottom="8dp"/>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/chipSn" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-sn" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipSv" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-sV" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipSt" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-sT" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipA" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-A" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipPn" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-Pn" android:textColor="@color/primary"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button android:id="@+id/chipF" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-F" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipP" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-p-" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipTop100" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="--top-ports 100" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipT4" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-T4" android:textColor="@color/primary"/>
+                    <Button android:id="@+id/chipSC" style="?android:attr/borderlessButtonStyle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="-sC" android:textColor="@color/primary"/>
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <Button android:id="@+id/btnStart"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="@string/btn_start"
+            android:textSize="16sp" android:paddingTop="14dp" android:paddingBottom="14dp"
+            android:backgroundTint="@color/primary" android:textColor="@color/bg"/>
+        <Button android:id="@+id/btnWifi"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" android:text="@string/btn_wifi"
+            android:backgroundTint="@color/surface" android:textColor="@color/text"/>
+        <TextView android:id="@+id/tvStatus"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" android:text="@string/status_ready"
+            android:textColor="@color/text_secondary" android:textSize="12sp"
+            android:gravity="center"/>
+    </LinearLayout>
+</ScrollView>

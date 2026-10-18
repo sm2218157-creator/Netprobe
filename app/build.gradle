@@ -7,7 +7,7 @@ android {
         minSdk 24
         targetSdk 34
         versionCode 20
-        versionName "20.0"
+        versionName "19.4"
     }
     buildTypes { release { minifyEnabled false } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }

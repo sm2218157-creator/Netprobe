@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg" android:padding="12dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/wifi_title" android:textColor="@color/primary"
+        android:textSize="20sp" android:textStyle="bold" android:gravity="center"
+        android:paddingBottom="12dp"/>
+    <Button android:id="@+id/btnScanWifi"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="@string/wifi_scan" android:backgroundTint="@color/primary"
+        android:textColor="@color/bg"/>
+    <TextView android:id="@+id/tvWifiStatus"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingTop="12dp" android:textColor="@color/text_secondary"
+        android:textSize="13sp" android:text="اضغط للبدء"/>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerWifi"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:layout_marginTop="12dp"/>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent">#F78166</color>
+    <color name="bg">#0D1117</color>
+    <color name="green">#3FB950</color>
+    <color name="primary">#58A6FF</color>
+    <color name="red">#F85149</color>
+    <color name="surface">#161B22</color>
+    <color name="text">#C9D1D9</color>
+    <color name="text_secondary">#8B949E</color>
+    <string name="app_name">NetProbe</string>
+    <string name="btn_clear">مسح</string>
+    <string name="btn_save">حفظ</string>
+    <string name="btn_shizuku">طلب Shizuku</string>
+    <string name="btn_start">ابدأ الفحص</string>
+    <string name="btn_stop">إيقاف</string>
+    <string name="btn_wifi">ماسح WiFi</string>
+    <string name="hint_extra_args">أوامر إضافية (اختياري)</string>
+    <string name="hint_target">192.168.1.1 أو example.com</string>
+    <string name="label_shortcuts">اختصارات Nmap:</string>
+    <string name="status_ready">جاهز — أدخل الهدف</string>
+    <string name="terminal_title">طرفية Nmap</string>
+    <string name="title_main">NetProbe — Nmap Scanner</string>
+    <string name="wifi_scan">فحص الشبكات</string>
+    <string name="wifi_title">ماسح الشبكات</string>
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+</resources>

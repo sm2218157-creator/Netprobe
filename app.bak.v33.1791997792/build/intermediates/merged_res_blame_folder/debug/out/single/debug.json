@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/drawable_ic_launcher.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/layout_activity_terminal.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/layout/activity_terminal.xml"
+    },
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/layout_activity_main.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/layout_item_wifi.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/layout/item_wifi.xml"
+    },
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/xml_file_paths.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/xml/file_paths.xml"
+    },
+    {
+        "merged": "com.xk.netprobe.app-merged_res-32:/layout_activity_wifi.xml.flat",
+        "source": "com.xk.netprobe.app-main-34:/layout/activity_wifi.xml"
+    }
+]

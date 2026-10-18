@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.xk.netprobe.app-mergeDebugResources-30:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/home/codespace/.gradle/caches/8.10.2/transforms/39c9f7f5c466e93937871ef17639e591/transformed/material-1.11.0/res/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "63",
+                        "endOffsets": "114"
+                    }
+                }
+            ]
+        }
+    ]
+}
