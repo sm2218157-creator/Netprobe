@@ -1,13 +1,11 @@
 package com.xk.netprobe;
-
 import android.Manifest;
-import android.content.ClipData;
-import android.content.ClipboardManager;
-import android.content.Context;
-import android.content.Intent;
+import android.content.*;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,70 +13,70 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 public class MainActivity extends AppCompatActivity {
-    private TextView tvSetupStatus;
-    private Button btnSetup;
+    private TextView tvSetupStatus; private Button btnSetup;
     private static final int LOC_PERM_CODE = 101;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    private final Handler pollHandler = new Handler(Looper.getMainLooper()); private boolean polling = false;
+    
+    private final Runnable pollRunnable = new Runnable() {
+        @Override public void run() {
+            if (!polling) return; refreshSetupState();
+            if (FileHelper.exists(MainActivity.this, "ready.txt") || FileHelper.exists(MainActivity.this, "error.txt")) { polling = false; return; }
+            pollHandler.postDelayed(this, 2000);
+        }
+    };
+    
+    @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        tvSetupStatus = findViewById(R.id.tvSetupStatus);
-        btnSetup = findViewById(R.id.btnSetup);
-
-        btnSetup.setOnClickListener(v -> {
-            if (!FileHelper.exists(this, "ready.txt")) launchSetup();
-            else Toast.makeText(this, "Settings are already active!", Toast.LENGTH_SHORT).show();
+        tvSetupStatus = findViewById(R.id.tvSetupStatus); btnSetup = findViewById(R.id.btnSetup);
+        
+        btnSetup.setOnClickListener(v -> { 
+            if (FileHelper.exists(this, "ready.txt")) Toast.makeText(this, "Already active!", Toast.LENGTH_SHORT).show(); 
+            else launchSetup(); 
         });
-
+        
         findViewById(R.id.cardLocalNetwork).setOnClickListener(v -> {
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) 
                 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOC_PERM_CODE);
-            } else {
-                startActivity(new Intent(this, LocalNetworkActivity.class));
-            }
+            else startActivity(new Intent(this, LocalNetworkActivity.class));
         });
     }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    
+    @Override protected void onResume() { super.onResume(); refreshSetupState(); if (!FileHelper.exists(this, "ready.txt") && !FileHelper.exists(this, "error.txt")) startPolling(); }
+    @Override protected void onPause() { super.onPause(); polling = false; }
+    @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == LOC_PERM_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            startActivity(new Intent(this, LocalNetworkActivity.class));
+        if (requestCode == LOC_PERM_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) startActivity(new Intent(this, LocalNetworkActivity.class));
+    }
+    private void startPolling() { if (polling) return; polling = true; pollHandler.post(pollRunnable); }
+    
+    private void refreshSetupState() {
+        if (FileHelper.exists(this, "error.txt")) {
+            tvSetupStatus.setText("Status: Setup failed — long-press to retry"); tvSetupStatus.setTextColor(0xFFF85149);
+            btnSetup.setText("RETRY SETUP"); btnSetup.setBackgroundTintList(ColorStateList.valueOf(0xFFDA3633)); btnSetup.setEnabled(true);
+        } else if (FileHelper.exists(this, "ready.txt")) {
+            tvSetupStatus.setText("Status: Setup Ready ✓"); tvSetupStatus.setTextColor(0xFF3FB950);
+            btnSetup.setText("تم تفعيل الإعدادات"); btnSetup.setBackgroundTintList(ColorStateList.valueOf(0xFF3FB950)); btnSetup.setEnabled(false);
         } else {
-            Toast.makeText(this, "Location permission is required for Wi-Fi scan", Toast.LENGTH_LONG).show();
+            tvSetupStatus.setText("Status: Setup needed"); tvSetupStatus.setTextColor(0xFFF85149);
+            btnSetup.setText("SETUP TERMUX"); btnSetup.setBackgroundTintList(ColorStateList.valueOf(0xFF1F6FEB)); btnSetup.setEnabled(true);
         }
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        boolean ready = FileHelper.exists(this, "ready.txt");
-        if (ready) {
-            tvSetupStatus.setText("Status: Setup Ready ✓");
-            tvSetupStatus.setTextColor(0xFF3FB950);
-            btnSetup.setText("تم تفعيل الإعدادات");
-            btnSetup.setBackgroundTintList(ColorStateList.valueOf(0xFF3FB950));
-            btnSetup.setEnabled(false);
-        } else {
-            tvSetupStatus.setText("Status: Setup needed");
-            tvSetupStatus.setTextColor(0xFFF85149);
-            btnSetup.setText("SETUP TERMUX");
-            btnSetup.setBackgroundTintList(ColorStateList.valueOf(0xFF1F6FEB));
-            btnSetup.setEnabled(true);
-        }
-    }
-
+    
     private void launchSetup() {
-        String cmd = "curl -sL https://raw.githubusercontent.com/sm2218157-creator/Netprobe/main/setup.sh -o setup.sh && bash setup.sh";
+        if (!TermuxBridge.isTermuxInstalled(this)) { Toast.makeText(this, "Termux not installed.", Toast.LENGTH_LONG).show(); return; }
+        
+        String cmd = SetupScriptStore.SETUP_SCRIPT;
+        
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         if (clipboard != null) {
-            ClipData clip = ClipData.newPlainText("setup", cmd);
-            clipboard.setPrimaryClip(clip);
+            clipboard.setPrimaryClip(ClipData.newPlainText("setup", cmd));
         }
-        Toast.makeText(this, "Copied! Paste in Termux.", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Copied! Paste in Termux, then press Enter.", Toast.LENGTH_LONG).show();
+        tvSetupStatus.setText("Status: Waiting for Termux..."); 
+        tvSetupStatus.setTextColor(0xFFF0B72F); 
+        startPolling();
         TermuxBridge.openTermux(this);
     }
 }
