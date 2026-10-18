@@ -6,8 +6,8 @@ android {
         applicationId "com.xk.netprobe"
         minSdk 24
         targetSdk 34
-        versionCode 20
-        versionName "19.4"
+        versionCode 21
+        versionName "19.5"
     }
     buildTypes { release { minifyEnabled false } }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }

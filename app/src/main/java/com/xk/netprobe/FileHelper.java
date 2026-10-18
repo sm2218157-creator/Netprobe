@@ -1,6 +1,5 @@
 package com.xk.netprobe;
 import android.content.Context;
-import android.util.Log;
 import java.io.*;
 public class FileHelper {
     public static File dir(Context ctx) {

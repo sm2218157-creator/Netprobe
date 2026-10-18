@@ -1,7 +1,6 @@
 package com.xk.netprobe;
 import android.content.Context;
 import android.net.wifi.WifiManager;
-import android.util.Log;
 import java.net.*;
 import java.util.*;
 public class NetInfo {

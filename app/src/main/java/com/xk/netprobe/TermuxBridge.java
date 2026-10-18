@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.util.Log;
 public class TermuxBridge {
     public static final String ACTION_RESULT = "com.xk.netprobe.TERMUX_RESULT";
     public static final String EXTRA_STDOUT = "stdout";
