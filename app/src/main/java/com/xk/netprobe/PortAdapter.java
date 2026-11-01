@@ -13,23 +13,24 @@ public class PortAdapter extends RecyclerView.Adapter<PortAdapter.VH> {
         ports.clear();
         if (rawData != null) {
             for (String line : rawData.split("\n")) {
-                if (line.contains("/tcp") && line.contains("open")) {
-                    String[] parts = line.trim().split("\\s+");
+                String trimmed = line.trim();
+                if (trimmed.isEmpty()) continue;
+                if (trimmed.contains("/tcp") && trimmed.contains("open")) { // صيغة nmap
+                    String[] parts = trimmed.split("\\s+");
                     if (parts.length >= 3) {
                         String port = parts[0].split("/")[0];
                         String service = parts.length >= 4 ? parts[2] + " " + parts[3] : parts[2];
                         ports.add(new String[]{port, service});
                     }
+                } else if (trimmed.contains("(") && trimmed.contains(")")) { // صيغة الماسح المدمج (جافا)
+                    String[] parts = trimmed.split("\\(");
+                    if (parts.length >= 2) {
+                        String port = parts[0].trim();
+                        String service = parts[1].replace(")", "").trim();
+                        ports.add(new String[]{port, service});
+                    }
                 }
             }
-        }
-        notifyDataSetChanged();
-    }
-    public void setJavaData(List<String> javaPorts) {
-        ports.clear();
-        for (String p : javaPorts) {
-            String[] parts = p.split(" ");
-            ports.add(new String[]{parts[0], parts[1].replace("(", "").replace(")", "")});
         }
         notifyDataSetChanged();
     }

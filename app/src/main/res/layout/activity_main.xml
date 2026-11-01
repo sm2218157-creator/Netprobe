@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="#0D1117" android:padding="16dp">
-    <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NetProbe" android:textColor="#58A6FF" android:textSize="24sp" android:textStyle="bold"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v20.0" android:textColor="#8B949E" android:textSize="12sp"/>
-            <TextView android:id="@+id/tvSetupStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Setup needed" android:textColor="#F85149" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
-            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="نسخ سكربت التجهيز لـ Termux (للمرة الأولى فقط)." android:textColor="#C9D1D9" android:textSize="12sp" android:gravity="center" android:layout_marginTop="8dp" android:layout_marginBottom="16dp"/>
-            <Button android:id="@+id/btnSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SETUP TERMUX" android:textColor="#FFFFFF" android:backgroundTint="#1F6FEB"/>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#0D1117" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp" android:layout_marginBottom="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NetProbe" android:textColor="#58A6FF" android:textSize="24sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="v23.3" android:textColor="#8B949E" android:textSize="12sp"/>
+                <TextView android:id="@+id/tvSetupStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status: Setup needed" android:textColor="#F85149" android:textSize="14sp" android:textStyle="bold" android:layout_marginTop="10dp"/>
+                <Button android:id="@+id/btnSetup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="SETUP TERMUX" android:textColor="#FFFFFF" android:backgroundTint="#1F6FEB" android:layout_marginTop="16dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- كارت NetHunter مع الزرين بجانب بعض -->
+        <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp" android:layout_marginBottom="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="NetHunter Rootless\n(~2GB Download) - Auto Minimal" android:textColor="#A371F7" android:textSize="16sp" android:textStyle="bold" android:gravity="center" android:padding="10dp"/>
+                
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+                    <Button android:id="@+id/btnDownloadNethunter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginEnd="4dp"
+                        android:text="تنزيل NetHunter" android:textColor="#FFFFFF" android:backgroundTint="#A371F7"/>
+                    
+                    <Button android:id="@+id/btnCheckNethunter" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="4dp"
+                        android:text="تحقق من NetHunter" android:textColor="#FFFFFF" android:backgroundTint="#F0B72F"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp" android:layout_marginBottom="16dp" android:background="#161B22">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="للدخول إلى بيئة NetHunter:" android:textColor="#C9D1D9" android:textSize="14sp"/>
+            <TextView android:id="@+id/tvCodeEnter" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="nethunter" android:textColor="#3FB950" android:textSize="16sp" android:fontFamily="monospace" android:textStyle="bold" android:padding="8dp" android:background="#0D1117" android:layout_marginTop="4dp" android:layout_marginBottom="12dp" android:clickable="true" android:focusable="true"/>
+            
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="للخروج من بيئة NetHunter:" android:textColor="#C9D1D9" android:textSize="14sp"/>
+            <TextView android:id="@+id/tvCodeExit" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="exit" android:textColor="#F85149" android:textSize="16sp" android:fontFamily="monospace" android:textStyle="bold" android:padding="8dp" android:background="#0D1117" android:layout_marginTop="4dp" android:clickable="true" android:focusable="true"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="اضغط على الكود لنسخه" android:textColor="#8B949E" android:textSize="11sp" android:layout_marginTop="4dp"/>
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="الأدوات والأقسام" android:textColor="#8B949E" android:layout_marginTop="24dp" android:layout_marginBottom="12dp"/>
-    <androidx.cardview.widget.CardView android:id="@+id/cardLocalNetwork" android:layout_width="match_parent" android:layout_height="wrap_content" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:padding="20dp" android:gravity="center_vertical">
-            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="الشبكة المحلية\nاكتشاف الأجهزة المتصلة" android:textColor="#C9D1D9" android:textSize="14sp"/>
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="→" android:textSize="24sp" android:textColor="#58A6FF"/>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-</LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tools" android:textColor="#FFFFFF" android:textSize="20sp" android:textStyle="bold" android:layout_marginBottom="12dp"/>
+
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="2" android:rowCount="1" android:useDefaultMargins="true">
+            <androidx.cardview.widget.CardView android:id="@+id/cardLocalNetwork" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginEnd="8dp" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_wifi"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Local network" android:textColor="#C9D1D9" android:textSize="14sp" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@+id/cardAttack" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:layout_marginStart="8dp" app:cardBackgroundColor="#161B22" app:cardCornerRadius="12dp" app:cardElevation="0dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp" android:gravity="center">
+                    <ImageView android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_key"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Attack" android:textColor="#C9D1D9" android:textSize="14sp" android:layout_marginTop="12dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </GridLayout>
+    </LinearLayout>
+</ScrollView>

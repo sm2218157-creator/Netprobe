@@ -10,7 +10,12 @@
                 <ImageButton android:id="@+id/btnRescan" android:layout_width="48dp" android:layout_height="48dp" android:background="?attr/selectableItemBackgroundBorderless" android:src="@android:drawable/ic_popup_sync" android:tint="#58A6FF"/>
             </LinearLayout>
             <TextView android:id="@+id/tvMyIp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="My IP: 192.168.x.x" android:textColor="#F85149" android:textSize="14sp" android:layout_marginTop="4dp" android:textStyle="bold"/>
-            <TextView android:id="@+id/tvSubnet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Subnet: 192.168.1.0/24" android:textColor="#8B949E" android:textSize="12sp" android:layout_marginTop="4dp"/>
+            <TextView android:id="@+id/tvSubnet" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Router: ..." android:textColor="#8B949E" android:textSize="12sp" android:layout_marginTop="4dp"/>
+            
+            <!-- النص الجديد المطلوب -->
+            <TextView android:id="@+id/tvShizukuHint" android:layout_width="wrap_content" android:layout_height="wrap_content" 
+                android:text="فعل شيزوكو لتحصل على صلاحيات أقوى" android:textColor="#F0B72F" android:textSize="11sp" android:layout_marginTop="4dp"/>
+            
             <ProgressBar android:id="@+id/progressBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" style="?android:attr/progressBarStyleHorizontal" android:indeterminate="true" android:indeterminateTint="#58A6FF" android:visibility="gone"/>
             <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ready to scan." android:textColor="#3FB950" android:textSize="12sp" android:layout_marginTop="8dp"/>
         </LinearLayout>

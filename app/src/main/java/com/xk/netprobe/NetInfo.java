@@ -40,7 +40,7 @@ public class NetInfo {
         try (BufferedReader br = new BufferedReader(new FileReader("/proc/net/route"))) {
             String line;
             while ((line = br.readLine()) != null) {
-                String[] parts = line.split("\\s+");
+                String[] parts = line.trim().split("\\s+");
                 if (parts.length > 2 && parts[1].equals("00000000")) {
                     String hex = parts[2];
                     int ip = Integer.parseInt(hex, 16);
