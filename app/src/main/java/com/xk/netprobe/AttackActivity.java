@@ -20,27 +20,25 @@ public class AttackActivity extends AppCompatActivity {
             return;
         }
 
+        // زر Bettercap
+        findViewById(R.id.cardBettercap).setOnClickListener(v -> {
+            copyToClipboard(SetupScriptStore.BETTERCAP_SCRIPT);
+        });
+
+        // زر WiFite2
         findViewById(R.id.cardInstallWps).setOnClickListener(v -> {
-            // استخدام الوضع الصامت (الخلفية)
-            boolean sent = TermuxBridge.runCommandBackground(this, SetupScriptStore.WPS_INSTALL_SCRIPT, 606);
+            boolean sent = TermuxBridge.runCommandBackground(this, SetupScriptStore.WIFITE_SCRIPT, 606);
             if (sent) {
                 Toast.makeText(this, "Executing in background...", Toast.LENGTH_SHORT).show();
-                // تأخير ثانيتين لضمان استقبال Termux للأمر قبل فتح الشاشة
                 new Handler(Looper.getMainLooper()).postDelayed(() -> TermuxBridge.openTermux(this), 2000);
             } else {
-                // الحل الرابع (الاحتياطي): نسخ إلى الحافظة
-                copyToClipboard(SetupScriptStore.WPS_INSTALL_SCRIPT);
+                copyToClipboard(SetupScriptStore.WIFITE_SCRIPT);
             }
         });
 
+        // زر Wi-Fi Nightmare
         findViewById(R.id.cardRunWps).setOnClickListener(v -> {
-            boolean sent = TermuxBridge.runCommandBackground(this, SetupScriptStore.WPS_RUN_SCRIPT, 707);
-            if (sent) {
-                Toast.makeText(this, "Executing in background...", Toast.LENGTH_SHORT).show();
-                new Handler(Looper.getMainLooper()).postDelayed(() -> TermuxBridge.openTermux(this), 2000);
-            } else {
-                copyToClipboard(SetupScriptStore.WPS_RUN_SCRIPT);
-            }
+            copyToClipboard(SetupScriptStore.WIFI_NIGHTMARE_SCRIPT);
         });
     }
 
@@ -48,7 +46,7 @@ public class AttackActivity extends AppCompatActivity {
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         if (clipboard != null) {
             clipboard.setPrimaryClip(ClipData.newPlainText("script", text));
-            Toast.makeText(this, "Termux bridge failed. Script copied to clipboard.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Script copied! Paste in Termux.", Toast.LENGTH_LONG).show();
             TermuxBridge.openTermux(this);
         }
     }

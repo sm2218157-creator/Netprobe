@@ -1,5 +1,27 @@
 package com.xk.netprobe;
 import android.Manifest;
+import android.provider.Settings;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import android.widget.ProgressBar;
+
+import android.app.DownloadManager;
+import android.content.BroadcastReceiver;
+import android.content.IntentFilter;
+import android.net.Uri;
+import android.os.Environment;
+import android.view.View;
+import android.widget.ImageButton;
+import androidx.core.content.FileProvider;
+import org.json.JSONObject;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.File;
+
 import android.content.*;
 import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
@@ -11,6 +33,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import java.io.BufferedReader;
@@ -19,6 +42,8 @@ import java.lang.reflect.Method;
 import rikka.shizuku.Shizuku;
 
 public class MainActivity extends AppCompatActivity {
+    private long downloadId = -1;
+    private BroadcastReceiver onDownloadComplete;
     private TextView tvSetupStatus; 
     private Button btnSetup;
     private Button btnDownloadNethunter;
@@ -50,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.cardLocalNetwork).setOnClickListener(v -> openLocalNetwork());
         findViewById(R.id.cardAttack).setOnClickListener(v -> startActivity(new Intent(this, AttackActivity.class)));
         
+        // ربط زر ESP32
+        findViewById(R.id.cardEsp32).setOnClickListener(v -> startActivity(new Intent(this, Esp32Activity.class)));
+        
         btnDownloadNethunter.setOnClickListener(v -> {
             ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             if (clipboard != null) clipboard.setPrimaryClip(ClipData.newPlainText("nethunter", SetupScriptStore.NETHUNTER_SCRIPT));
@@ -69,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
 
         try { Shizuku.addRequestPermissionResultListener(permListener); } catch (Exception ignored) {}
         checkInitialStatus();
+        checkForUpdates();
     }
     
     private void copyToClipboard(String text) {
@@ -89,25 +118,22 @@ public class MainActivity extends AppCompatActivity {
         String status = FileHelper.read(this, "nethunter_status.txt").trim();
         if (status.equals("READY")) {
             btnCheckNethunter.setText("مثبت وجاهز");
-            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFF3FB950)); // Green
+            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFF3FB950));
             btnCheckNethunter.setEnabled(false);
-            
             btnDownloadNethunter.setEnabled(false);
-            btnDownloadNethunter.setAlpha(0.5f); // Baha
+            btnDownloadNethunter.setAlpha(0.5f);
         } else if (status.equals("MISSING")) {
             btnCheckNethunter.setText("غير مثبت");
-            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFFF85149)); // Red
+            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFFF85149));
             btnCheckNethunter.setEnabled(true);
-            
             btnDownloadNethunter.setEnabled(true);
-            btnDownloadNethunter.setAlpha(1.0f); // Bariz
+            btnDownloadNethunter.setAlpha(1.0f);
         } else {
             btnCheckNethunter.setText("تحقق من NetHunter");
-            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFFF0B72F)); // Orange
+            btnCheckNethunter.setBackgroundTintList(ColorStateList.valueOf(0xFFF0B72F));
             btnCheckNethunter.setEnabled(true);
-            
             btnDownloadNethunter.setEnabled(true);
-            btnDownloadNethunter.setAlpha(1.0f); // Bariz
+            btnDownloadNethunter.setAlpha(1.0f);
         }
     }
 
@@ -177,4 +203,134 @@ public class MainActivity extends AppCompatActivity {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == LOC_PERM_CODE && grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) startActivity(new Intent(this, LocalNetworkActivity.class));
     }
+
+    private void checkForUpdates() {
+        new Thread(() -> {
+            try {
+                URL url = new URL("https://raw.githubusercontent.com/sm2218157-creator/Netprobe/main/update.json");
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("GET");
+                BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) { response.append(line); }
+                reader.close();
+                
+                JSONObject json = new JSONObject(response.toString());
+                int latestVersion = json.getInt("versionCode");
+                String apkUrl = json.getString("apk_url");
+                String versionName = json.getString("versionName");
+
+                int tempVersion = 0;
+                try {
+                    tempVersion = getPackageManager().getPackageInfo(getPackageName(), 0).versionCode;
+                } catch (Exception ignored) {}
+                final int currentVersion = tempVersion;
+
+                if (latestVersion > currentVersion) {
+                    runOnUiThread(() -> showUpdateDialog(apkUrl, versionName));
+                } else {
+                    runOnUiThread(() -> Toast.makeText(MainActivity.this, "Debug: You have the latest version (" + currentVersion + ")", Toast.LENGTH_SHORT).show());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                runOnUiThread(() -> Toast.makeText(MainActivity.this, "Debug: Update check failed - " + e.getMessage(), Toast.LENGTH_LONG).show());
+            }
+        }).start();
+    }
+
+    private void showUpdateDialog(String apkUrl, String versionName) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
+        View view = getLayoutInflater().inflate(R.layout.dialog_update, null);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.setCancelable(false);
+
+        ImageButton btnClose = view.findViewById(R.id.btnCloseUpdate);
+        Button btnUpdate = view.findViewById(R.id.btnUpdateNow);
+        TextView tvVersion = view.findViewById(R.id.tvUpdateVersion);
+        
+        tvVersion.setText("Version " + versionName + " is available!");
+        
+        btnClose.setOnClickListener(v -> dialog.dismiss());
+        btnUpdate.setOnClickListener(v -> {
+            ProgressBar progressBar = view.findViewById(R.id.progressBar);
+            TextView tvProgress = view.findViewById(R.id.tvProgressText);
+            downloadAndInstall(apkUrl, progressBar, tvProgress, btnUpdate);
+        });
+        dialog.show();
+    }
+
+    private void downloadAndInstall(String apkUrl, ProgressBar progressBar, TextView tvProgressText, Button btnUpdate) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            if (!getPackageManager().canRequestPackageInstalls()) {
+                Toast.makeText(this, "Please allow installing updates from this app.", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES);
+                intent.setData(Uri.parse("package:" + getPackageName()));
+                startActivity(intent);
+                return;
+            }
+        }
+
+        btnUpdate.setVisibility(View.GONE);
+        progressBar.setVisibility(View.VISIBLE);
+        tvProgressText.setVisibility(View.VISIBLE);
+
+        new Thread(() -> {
+            try {
+                URL url = new URL(apkUrl);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.connect();
+
+                int fileLength = conn.getContentLength();
+                File apkFile = new File(getExternalFilesDir(null), "update.apk");
+                FileOutputStream fos = new FileOutputStream(apkFile);
+                InputStream is = conn.getInputStream();
+
+                byte[] buffer = new byte[1024];
+                int len;
+                long total = 0;
+
+                while ((len = is.read(buffer)) != -1) {
+                    total += len;
+                    fos.write(buffer, 0, len);
+                    if (fileLength > 0) {
+                        int progress = (int) (total * 100 / fileLength);
+                        runOnUiThread(() -> {
+                            progressBar.setProgress(progress);
+                            tvProgressText.setText(progress + "%");
+                        });
+                    }
+                }
+                fos.close();
+                is.close();
+
+                runOnUiThread(() -> {
+                    tvProgressText.setText("Download Complete. Installing...");
+                    installApk(apkFile);
+                });
+            } catch (Exception e) {
+                runOnUiThread(() -> {
+                    Toast.makeText(this, "Download failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                    progressBar.setVisibility(View.GONE);
+                    tvProgressText.setVisibility(View.GONE);
+                    btnUpdate.setVisibility(View.VISIBLE);
+                });
+            }
+        }).start();
+    }
+
+    private void installApk(File apkFile) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setDataAndType(FileProvider.getUriForFile(this, getPackageName() + ".fileprovider", apkFile), "application/vnd.android.package-archive");
+            intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Failed to open installer: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
+
